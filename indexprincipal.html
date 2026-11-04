@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEQ Campo Alegre | Curitiba - PR</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Menu de Navegação no Topo */
+    header {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .nav-btn-eb {
+      background-color: var(--accent);
+      color: #0f172a !important;
+      font-weight: 700 !important;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-btn-eb:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Capa / Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px;
+      border-bottom: 5px solid var(--accent);
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fcd34d;
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #0f172a;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-3px);
+    }
+
+    /* Container Principal */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+    }
+
+    /* Bloco de Horários */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .schedule-card {
+      background: var(--card-bg);
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--primary);
+      text-align: center;
+    }
+
+    .schedule-card.highlight {
+      border-top-color: var(--accent);
+    }
+
+    .schedule-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .schedule-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .schedule-time {
+      display: inline-block;
+      background: #e2e8f0;
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .schedule-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Sobre e Localização */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .info-box {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .info-box h3 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-box p {
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--primary-dark);
+      color: #94a3b8;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-container { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <header>
+    <div class="nav-container">
+      <a href="./" class="logo">IEQ <span>Campo Alegre</span></a>
+      <nav>
+        <a href="#horarios">Reuniões</a>
+        <a href="#sobre">Quem Somos</a>
+        <a href="#localizacao">Localização</a>
+        <a href="aprofundidade/" class="nav-btn-eb">📖 Escola Bíblica</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER DE BOAS-VINDAS -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">Igreja do Evangelho Quadrangular</span>
+      <h1>Bem-vindo à IEQ Campo Alegre</h1>
+      <p>Uma família para pertencer, um lugar para crescer na fé, na comunhão e no estudo profundo da Palavra de Deus.</p>
+      <a href="aprofundidade/" class="cta-button">📖 Acessar Portal da Escola Bíblica →</a>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container">
+
+    <!-- HORÁRIOS -->
+    <div id="horarios" class="section-title">
+      <h2>Nossas Reuniões</h2>
+      <p>Participe conosco! Você e sua família são nossos convidados especiais.</p>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="schedule-card highlight">
+        <span class="schedule-icon">📖</span>
+        <h3>Escola Bíblica</h3>
+        <span class="schedule-time">Domingos • 09h00</span>
+        <p>Estudo sistemático das Escrituras: <em>A Profundidade da Palavra de Deus</em>.</p>
+      </div>
+
+      <div class="schedule-card">
+        <span class="schedule-icon">🙌</span>
+        <h3>Culto da Família</h3>
+        <span class="schedule-time">Domingos • 18h00</span>
+        <p>Uma noite de louvor, adoração, oração e ministração da Palavra para toda a família.</p>
+      </div>
+
+      <div class="schedule-card">
+        <span class="schedule-icon">🔥</span>
+        <h3>Meio de Semana</h3>
+        <span class="schedule-time">Quartas/Quintas • 19h30</span>
+        <p>Culto de Oração, Ensino e Busca pelo fortalecimento espiritual.</p>
+      </div>
+    </div>
+
+    <!-- SOBRE E ENDEREÇO -->
+    <div class="info-grid">
+      <div id="sobre" class="info-box">
+        <h3>⛪ Sobre Nós</h3>
+        <p>Somos uma igreja local apaixonada por Jesus, fundamentada no ensino sólido das Escrituras e comprometida em acolher pessoas com amor no bairro Campo Alegre, em Curitiba.</p>
+        <p>Nosso propósito é levar a mensagem transformadora do Evangelho Quadrangular, edificando famílias e preparando discípulos através da oração, da comunhão e do conhecimento bíblico.</p>
+      </div>
+
+      <div id="localizacao" class="info-box">
+        <h3>📍 Onde Estamos</h3>
+        <p><strong>Bairro Campo Alegre — Curitiba, PR</strong></p>
+        <p>Venha nos fazer uma visita em um de nossos cultos semanais ou entre em contato para pedidos de oração e informações.</p>
+        <p style="margin-top: 20px; font-weight: 600; color: #1e3a8a;">💬 Dúvidas? Fale conosco presencialmente ou acompanhe nossos estudos online pela Escola Bíblica.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p><strong>Igreja do Evangelho Quadrangular — Campo Alegre</strong></p>
+    <p>Curitiba - Paraná | Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
