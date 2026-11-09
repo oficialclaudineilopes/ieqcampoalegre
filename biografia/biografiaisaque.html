@@ -3,37 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estágio 07 – Biografia de Isaque</title>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<title>Estágio 07 – Biografia e Genealogia de Isaque</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
-  :root { --texto:#333333; --fundo:#FAFAFA; --destaque:#8a5a1f; --borda:#d9d2c5; --caixa:#F3EEE4; }
+  :root { 
+    --azul-escuro: #0f2147; /* Azul profundo do cabeçalho do site */
+    --amarelo: #ffb800;    /* Amarelo dos botões e destaques */
+    --texto: #333333;      /* Cinza escuro para alto contraste na leitura */
+    --fundo: #ffffff;      /* Fundo branco como o corpo do site */
+    --fundo-alt: #f8fafc;  /* Fundo levemente cinza para tabelas */
+    --borda: #e2e8f0;      /* Cinza claro para divisões sutis */
+  }
   * { box-sizing: border-box; }
   body { font-family: 'Open Sans', Roboto, Arial, sans-serif; font-size: 18px; line-height: 1.6; color: var(--texto); background: var(--fundo); margin: 0; padding: 0; }
   .pagina { max-width: 820px; margin: 0 auto; padding: 24px 18px 60px; }
-  header.capa { text-align: center; border-bottom: 3px solid var(--destaque); padding-bottom: 20px; margin-bottom: 24px; }
-  header.capa .escola { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: #666; margin: 0 0 4px; }
-  header.capa .serie { font-size: 15px; color: var(--destaque); font-weight: 700; margin: 0 0 10px; }
-  header.capa h1 { font-size: 30px; line-height: 1.25; margin: 6px 0; color: #222; }
-  header.capa .sub { font-size: 18px; font-style: italic; color: #555; margin: 4px 0 0; }
-  h2 { font-size: 24px; color: var(--destaque); border-bottom: 2px solid var(--borda); padding-bottom: 6px; margin-top: 44px; }
-  h3 { font-size: 20px; color: #222; margin-top: 28px; margin-bottom: 6px; }
+  
+  h1, h2, h3 { font-family: 'Merriweather', Lora, serif; }
+  
+  /* Cabeçalho espelhando o visual Dark Blue do topo do site */
+  header.capa { 
+    text-align: center; 
+    background-color: var(--azul-escuro); 
+    padding: 40px 20px; 
+    border-bottom: 6px solid var(--amarelo); 
+    border-radius: 12px;
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  header.capa .escola { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--amarelo); margin: 0 0 4px; font-weight: bold; }
+  header.capa .serie { font-size: 16px; color: #cbd5e0; font-weight: 600; margin: 0 0 15px; }
+  header.capa h1 { font-size: 32px; line-height: 1.25; margin: 6px 0; color: #ffffff; }
+  header.capa .sub { font-size: 18px; font-style: italic; color: #a0aec0; margin: 10px 0 0; }
+  
+  h2 { font-size: 26px; color: var(--azul-escuro); border-bottom: 2px solid var(--borda); padding-bottom: 6px; margin-top: 44px; }
+  h3 { font-size: 22px; color: var(--azul-escuro); margin-top: 28px; margin-bottom: 6px; }
   p { margin: 0 0 14px; text-align: left; }
-  .caixa { background: var(--caixa); border-left: 5px solid var(--destaque); padding: 14px 18px; margin: 20px 0; border-radius: 6px; }
+  
+  /* Estilo de Cartões inspirados na imagem do site */
+  .caixa, .indice { 
+    background: #ffffff; 
+    border: 1px solid var(--borda); 
+    border-top: 4px solid var(--azul-escuro); 
+    padding: 18px 22px; 
+    margin: 20px 0; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+  }
   .caixa p:last-child { margin-bottom: 0; }
-  .versiculo { font-weight: 700; font-style: italic; }
-  .indice { background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: 12px 20px; margin: 20px 0; }
-  .indice ol { margin: 6px 0 0; padding-left: 22px; }
-  .indice a { color: var(--destaque); text-decoration: none; }
-  table.ficha { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 17px; }
-  table.ficha th, table.ficha td { border: 1px solid var(--borda); padding: 8px 10px; vertical-align: top; text-align: left; }
-  table.ficha th { background: var(--caixa); width: 32%; }
-  .caixa-imagem { border: 2px dashed #aaa; background: #f0f0f0; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; color: #888; font-style: italic; border-radius: 8px; margin: 22px 0; padding: 12px; }
+  .versiculo { font-weight: 700; font-style: italic; color: var(--azul-escuro); }
+  
+  .indice { border-top-color: var(--amarelo); }
+  .indice b { color: var(--azul-escuro); font-size: 20px;}
+  .indice ol { margin: 10px 0 0; padding-left: 22px; }
+  .indice a { color: var(--texto); text-decoration: none; font-weight: 600; }
+  .indice a:hover { color: var(--amarelo); text-decoration: underline; }
+  
+  table.ficha, table.linhagem { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 17px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; }
+  table.ficha th, table.ficha td, table.linhagem th, table.linhagem td { border: 1px solid var(--borda); padding: 12px 14px; vertical-align: top; text-align: left; }
+  table.ficha th, table.linhagem th { background: var(--azul-escuro); color: #ffffff; font-weight: 700; border-color: var(--azul-escuro); }
+  table.linhagem td.geracao { width: 12%; text-align: center; font-weight: 700; color: var(--azul-escuro); background: var(--fundo-alt); }
+  table.linhagem td.patriarca { width: 23%; font-weight: 700; }
+  table.linhagem tr:nth-child(even) td { background: var(--fundo-alt); }
+  
+  .destaque-termo { font-weight: 700; color: var(--amarelo); background-color: var(--azul-escuro); padding: 2px 6px; border-radius: 4px; }
+  
+  /* Configuração das imagens */
+  .caixa-imagem { text-align: center; margin: 30px 0; }
+  .caixa-imagem img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.15); border: 1px solid var(--borda); }
+  
   ul.limpa { padding-left: 22px; }
   ul.limpa li { margin-bottom: 8px; }
-  .pensar { background: #fff; border: 1px solid var(--borda); border-radius: 8px; padding: 12px 18px; margin: 18px 0; }
-  footer { margin-top: 50px; border-top: 2px solid var(--borda); padding-top: 14px; font-size: 15px; color: #666; text-align: center; }
-  @media (max-width: 600px) { body { font-size: 18px; } header.capa h1 { font-size: 25px; } table.ficha th { width: 38%; } }
-  @media print { @page { size: A4; margin: 2cm; } body { background: #fff; } .caixa, .caixa-imagem, table.ficha, .pensar { page-break-inside: avoid; } }
+  
+  /* Caixa de reflexão com tom amarelado sutil */
+  .pensar { background: #fffcf0; border: 1px solid #fde68a; border-top: 4px solid var(--amarelo); border-radius: 8px; padding: 18px; margin: 24px 0; color: #5f370e; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .pensar b { color: #92400e; font-family: 'Merriweather', serif;}
+  
+  footer { margin-top: 50px; border-top: 2px solid var(--borda); padding-top: 20px; font-size: 15px; color: #718096; text-align: center; font-weight: 600; }
+  
+  @media (max-width: 600px) { body { font-size: 18px; } header.capa h1 { font-size: 26px; } table.ficha th { width: 38%; } table.linhagem { font-size: 15px; } .pagina { padding: 15px 12px 40px; } }
+  @media print { @page { size: A4; margin: 2cm; } body { background: #fff; } .caixa, .caixa-imagem, table.ficha, .pensar { page-break-inside: avoid; } table.linhagem tr { page-break-inside: avoid; } header.capa { background: transparent; color: #000; border-bottom: 2px solid #000; box-shadow: none; } header.capa h1, header.capa .escola, header.capa .serie, header.capa .sub { color: #000; } table.ficha th, table.linhagem th { background: #eee; color: #000; border-color: #ccc; } }
 </style>
 </head>
 <body>
@@ -41,13 +89,13 @@
 
 <header class="capa">
   <p class="escola">Escola Bíblica “A Profundidade da Palavra de Deus”</p>
-  <p class="serie">Expedição Raízes do Avivamento · Estágio 07 · Bônus Digital: A Escavação Profunda</p>
+  <p class="serie">Expedição Raízes do Avivamento · Estágio 07</p>
   <h1>Isaque: o homem que reabriu os poços</h1>
-  <p class="sub">Biografia do personagem principal de “A Fome e a Sede (Desespero por Deus)” · Gênesis 26:15-18</p>
+  <p class="sub">Biografia e Genealogia do personagem principal de “A Fome e a Sede (Desespero por Deus)” · Gênesis 26:15-18</p>
 </header>
 
 <div class="caixa">
-  <p><b>Para que serve esta página.</b> Na aula, estudamos um único momento da vida de Isaque: o dia em que ele decidiu cavar de novo os poços que o pai dele, Abraão, tinha aberto e que os filisteus encheram de terra. Aqui você encontra a vida inteira dele, do nascimento à morte, para entender de onde vinha esse homem e por que aquele gesto tem tanto peso.</p>
+  <p><b>Para que serve esta página.</b> Na aula, estudamos um único momento da vida de Isaque: o dia em que ele decidiu cavar de novo os poços que o pai dele, Abraão, tinha aberto e que os filisteus encheram de terra. Aqui você encontra a genealogia completa (desde Adão até as doze tribos) e a vida inteira dele, do nascimento à morte, para entender de onde vinha esse homem e por que aquele gesto tem tanto peso.</p>
   <p>A Bíblia é a nossa única regra de fé e prática. O que vem de fora dela (história, arqueologia, geografia) aparece apenas como <b>fonte histórica de contexto</b>, para iluminar o cenário, nunca para acrescentar nada à Escritura.</p>
 </div>
 
@@ -55,6 +103,7 @@
   <b>Neste estudo:</b>
   <ol>
     <li><a href="#ficha">Ficha do Personagem</a></li>
+    <li><a href="#genealogia">Genealogia de Isaque (De Adão às Doze Tribos)</a></li>
     <li><a href="#contexto">Contexto Histórico e Geográfico</a></li>
     <li><a href="#biografia">Biografia em ordem cronológica</a></li>
     <li><a href="#obras">Os Milagres e Obras de Deus</a></li>
@@ -65,7 +114,9 @@
   </ol>
 </nav>
 
-<div class="caixa-imagem">[IMAGEM 1 – Isaque, já adulto, junto a um poço no Neguev, ao entardecer]</div>
+<div class="caixa-imagem">
+  <img src="LINK_IMAGEM_1" alt="Isaque, já adulto, junto a um poço no Neguev, ao entardecer">
+</div>
 
 <!-- ============ 1 ============ -->
 <h2 id="ficha">1. Ficha do Personagem</h2>
@@ -81,214 +132,202 @@
   <tr><th>Onde foi sepultado</th><td>Na caverna de Macpela, em Hebron, enterrado por Esaú e Jacó (Gn 35:27-29; 49:31).</td></tr>
   <tr><th>Textos principais</th><td>Gênesis 21 a 28 e 35:27-29. Também citado em Romanos 9:7-9, Gálatas 4:28 e Hebreus 11:9, 17-20.</td></tr>
   <tr><th>Marca da vida dele</th><td>É o elo entre Abraão e Jacó: o filho da promessa que recebeu a fé do pai e a passou adiante, e que, no meio do caminho, precisou <b>reabrir os poços</b> que outros tinham tapado.</td></tr>
-  <tr><th>Texto do nosso Estágio</th><td>Gênesis 26:15-18.</td></tr>
+  <tr><th>Texto do Estágio</th><td>Gênesis 26:15-18.</td></tr>
 </table>
 
 <!-- ============ 2 ============ -->
-<h2 id="contexto">2. Contexto Histórico e Geográfico</h2>
+<h2 id="genealogia">2. Genealogia de Isaque: Da Criação às Doze Tribos</h2>
 
-<h3>A época</h3>
-<p>Isaque pertence ao período dos patriarcas, que a cronologia bíblica tradicional situa no início do segundo milênio antes de Cristo. As datas exatas são discutidas entre os estudiosos, e o texto bíblico não fornece um ano que possamos afirmar com segurança. Isso não atrapalha em nada o estudo. O que importa é o que o texto mostra: uma família que vive em tendas, com rebanhos, sem terra própria, no meio de povos que já moram em cidades e que controlam as fontes de água.</p>
-<p>Esse último detalhe é central para nós. Naquela região, quem controlava a água controlava a vida. Por isso a história de Isaque gira tanto em torno de poços.</p>
+<p>A linhagem de Isaque, o segundo patriarca de Israel, é um dos eixos centrais do livro de Gênesis. Ela atua como o elo contínuo da semente prometida (a linhagem messiânica), retrocedendo ininterruptamente até Adão através de duas grandes listas genealógicas (antes e depois do dilúvio) e avançando para a formação das doze tribos de Israel.</p>
 
-<h3>A Ponte Geográfica: onde tudo isso fica hoje</h3>
-<p>Gênesis 26 se passa no sul da terra de Canaã, na faixa de transição entre a região de Berseba e a planície costeira em direção a Gaza. Hoje, essa área fica no sul de Israel, na porção noroeste do deserto do Neguev.</p>
+<h3>A) O Mundo Antediluviano: De Adão a Noé (Gênesis 5)</h3>
+<table class="linhagem">
+  <thead>
+    <tr>
+      <th>Geração</th>
+      <th>Patriarca</th>
+      <th>Destaque Bíblico e Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="geracao">1</td><td class="patriarca">Adão</td><td>O primeiro homem, criado à imagem de Deus.</td></tr>
+    <tr><td class="geracao">2</td><td class="patriarca">Sete</td><td>O filho dado para substituir Abel. Em seus dias, “se começou a invocar o nome do Senhor”.</td></tr>
+    <tr><td class="geracao">3</td><td class="patriarca">Enos</td><td>Deu continuidade à linhagem que invocava ao Senhor.</td></tr>
+    <tr><td class="geracao">4</td><td class="patriarca">Cainã</td><td>Filho de Enos (Gn 5:9).</td></tr>
+    <tr><td class="geracao">5</td><td class="patriarca">Maalalel</td><td>Filho de Cainã (Gn 5:12).</td></tr>
+    <tr><td class="geracao">6</td><td class="patriarca">Jarede</td><td>Filho de Maalalel (Gn 5:15).</td></tr>
+    <tr><td class="geracao">7</td><td class="patriarca">Enoque</td><td>O profeta que “andou com Deus e já não era, porque Deus o tomou para si”.</td></tr>
+    <tr><td class="geracao">8</td><td class="patriarca">Matusalém</td><td>O homem que viveu mais tempo na narrativa bíblica (969 anos). Morreu no ano do dilúvio.</td></tr>
+    <tr><td class="geracao">9</td><td class="patriarca">Lameque</td><td>Profetizou que seu filho (Noé) traria consolo do trabalho árduo da terra amaldiçoada.</td></tr>
+    <tr><td class="geracao">10</td><td class="patriarca">Noé</td><td>Encontrou graça diante de Deus; preservou a humanidade do juízo do dilúvio.</td></tr>
+  </tbody>
+</table>
+
+<h3>B) O Mundo Pós-Dilúvio: De Sem a Terá (Gênesis 11)</h3>
+<table class="linhagem">
+  <thead>
+    <tr>
+      <th>Geração</th>
+      <th>Patriarca</th>
+      <th>Destaque Bíblico e Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="geracao">11</td><td class="patriarca">Sem</td><td>Filho de Noé. Deste nome deriva o termo “semita”.</td></tr>
+    <tr><td class="geracao">12</td><td class="patriarca">Arfaxade</td><td>Nasceu dois anos após o dilúvio (Gn 11:10).</td></tr>
+    <tr><td class="geracao">13</td><td class="patriarca">Selá</td><td>Filho de Arfaxade (Gn 11:12).</td></tr>
+    <tr><td class="geracao">14</td><td class="patriarca">Éber</td><td>Considerado o patriarca epônimo dos hebreus.</td></tr>
+    <tr><td class="geracao">15</td><td class="patriarca">Pelegue</td><td>O nome significa “divisão”. Em seus dias “se repartiu a terra”.</td></tr>
+    <tr><td class="geracao">16</td><td class="patriarca">Reú</td><td>Filho de Pelegue (Gn 11:18).</td></tr>
+    <tr><td class="geracao">17</td><td class="patriarca">Serugue</td><td>Filho de Reú (Gn 11:20).</td></tr>
+    <tr><td class="geracao">18</td><td class="patriarca">Naor</td><td>Avô de Abraão.</td></tr>
+    <tr><td class="geracao">19</td><td class="patriarca">Terá</td><td>Pai de Abraão. Iniciou a jornada de Ur dos Caldeus rumo a Canaã.</td></tr>
+  </tbody>
+</table>
+
+<h3>C) Os Patriarcas Fundadores e a Estrutura Familiar</h3>
 <ul class="limpa">
-  <li><b>Berseba</b> (em hebraico, <i>Be'er Sheva</i>) fica a cerca de 80 km em linha reta ao sul-sudoeste de Jerusalém, e a mais ou menos 45 km ao sul de Hebron. É a cidade que hoje leva o mesmo nome e é considerada a “capital” do Neguev. Em Gênesis, ela marca o limite sul do território onde os patriarcas circulavam.</li>
-  <li><b>Gerar</b> costuma ser associada pelos estudiosos a uma região a noroeste de Berseba, na direção de Gaza, a uns 25 km de distância. A identificação exata do sítio ainda é debatida. O vale de Gerar (<i>nachal Gerar</i>, נַחַל, H5158, “vale” ou leito de rio que só corre na época das chuvas) corresponde, em geral, a um leito seco que desce desse trecho.</li>
-  <li><b>Clima:</b> é uma região semiárida. A chuva anual é pouca, em geral pouco mais de 200 mm por ano, concentrada no inverno. O verão é quente e seco. Os leitos de rio ficam secos quase o ano todo e enchem de repente quando chove forte. É um lugar onde cada gota guardada faz diferença.</li>
-  <li><b>Rotas:</b> a estrada que seguia a costa em direção ao Egito é chamada na Bíblia de “caminho da terra dos filisteus” (Êx 13:17). Gerar ficava perto dessa área de passagem. Por isso, quando veio a fome, o caminho natural para quem queria sair dali era descer para o Egito, e é exatamente isso que Deus proíbe a Isaque em Gênesis 26:2.</li>
-  <li><b>Monte Moriá:</b> o texto diz que Abraão e Isaque caminharam três dias desde o lugar onde moravam até o local do sacrifício (Gn 22:4). A tradição bíblica liga Moriá à região de Jerusalém (2 Cr 3:1), e a distância entre as duas regiões combina bem com uma viagem de alguns dias a pé.</li>
+  <li><b>20ª Geração – Abraão:</b> Chamado por Deus, recebeu a aliança incondicional de que em sua descendência seriam benditas todas as famílias da terra.</li>
+  <li><b>21ª Geração – Isaque:</b> Nascido de forma milagrosa na velhice de Abraão e Sara (Gn 21:1-3). Ele garante que essa linhagem milenar não fosse extinta.</li>
+  <li><b>Meios-Irmãos:</b> Isaque era meio-irmão de Ismael (filho de Agar) e dos seis filhos que Abraão teve com Quetura após a morte de Sara (Gn 25:1-2).</li>
+  <li><b>Casamento:</b> Casou-se com Rebeca, filha de Betuel e neta de Naor (irmão de Abraão), para manter a aliança fora da idolatria dos povos de Canaã.</li>
 </ul>
 
-<h3>Arqueologia e costumes: o que era um poço naquela época</h3>
-<p><b>Fonte histórica de contexto.</b> Em regiões áridas do Oriente Antigo, um poço era um buraco profundo cavado à mão até chegar à água do subsolo. Muitas vezes as paredes eram reforçadas com pedras. Era um trabalho longo e caro, que podia levar semanas, e o poço passava a valer como uma espécie de escritura de posse: quem cavava e usava o poço tinha direito àquela água e, de certo modo, àquele pedaço de pasto em volta.</p>
-<p>Por isso, <b>tapar um poço</b> era um ato de agressão. Não era vandalismo à toa: era uma forma de dizer “você não é bem-vindo aqui”. A própria Bíblia mostra esse costume em tempos de guerra, quando exércitos tapavam as fontes do inimigo (2 Reis 3:19, 25). Os filisteus de Gerar não fizeram um estrago qualquer. Fizeram uma declaração: “vocês não têm direito a esta água”.</p>
-<p>Há uma observação honesta a fazer. O texto de Gênesis chama Abimeleque de “rei dos filisteus”, e os estudiosos discutem como entender esse nome para uma época tão antiga, já que os filisteus ficaram muito conhecidos na história bem depois. Há quem veja populações anteriores na região e quem entenda o termo como o nome pelo qual o autor identificava aquela gente, mais conhecido em seu tempo. O ponto central para nós não muda: eram vizinhos poderosos e hostis, que taparam a água de quem não era da terra.</p>
-<p>Também precisamos ser cuidadosos sobre as escavações. Em Tel Berseba (<i>Tel Be'er Sheva</i>), arqueólogos encontraram um grande poço e restos de uma cidade, mas eles pertencem a um período muito posterior ao dos patriarcas. Não existe nenhum poço escavado hoje que possamos apontar como sendo “o poço de Isaque”. O que a arqueologia nos entrega é o cenário: a vida no Neguev dependia de poços e cisternas, e o valor da água era imenso.</p>
-
-<div class="caixa-imagem">[IMAGEM 2 – Poço antigo com parede de pedras no Neguev]</div>
-
-<!-- ============ 3 ============ -->
-<h2 id="biografia">3. Biografia em ordem cronológica</h2>
-
-<h3>A) O filho que ninguém esperava (Gênesis 21:1-8)</h3>
-<p>Isaque nasceu depois de uma espera de décadas. Abraão e Sara já eram idosos quando Deus prometeu um filho, e ambos riram, cada um a seu tempo (Gn 17:17; 18:12). O texto de Gênesis 21 não esconde nada: <span class="versiculo">“O Senhor visitou Sara, como tinha dito”</span> (Gn 21:1, paráfrase). O nascimento aconteceu <b>na hora marcada por Deus</b>, não na hora marcada pela pressa humana.</p>
-<p>Ao dar o nome ao menino, Abraão o chamou de Isaque, “ele ri”. Sara resumiu a história numa frase de alegria: Deus lhe tinha dado motivo para rir (Gn 21:6). Antes dele, o riso era de dúvida. Depois dele, passou a ser de gratidão. O próprio nome do filho carrega essa transformação.</p>
-<p>Aos poucos, a casa de Abraão ficou dividida. Ismael, o filho mais velho, nascido de Agar, zombou do menino na festa em que Isaque foi desmamado (Gn 21:8-9). O verbo ali é o mesmo do nome de Isaque, <i>tsachaq</i>, “rir”, só que agora usado de forma cruel. Sara pediu que Agar e Ismael saíssem, e Deus confirmou a Abraão que a promessa passaria por Isaque (Gn 21:10-12). O texto mostra a dor de Abraão nessa hora: ele sofreu por causa do filho que ia embora (Gn 21:11). Desde cedo, Isaque cresceu dentro de uma família com feridas.</p>
-
-<h3>B) O monte Moriá (Gênesis 22:1-19)</h3>
-<p>Este é o momento mais conhecido e mais difícil da vida dele. Deus pediu a Abraão que oferecesse Isaque em sacrifício. O texto chama Isaque de “jovem” (<i>na'ar</i>, נַעַר, H5288), e não informa a idade exata. Isaque carregou a lenha nas costas. No caminho fez a pergunta que ainda hoje arrepia: <span class="versiculo">“Onde está o cordeiro?”</span> (Gn 22:7). A resposta de Abraão foi uma declaração de fé: <span class="versiculo">“Deus proverá para si o cordeiro”</span> (Gn 22:8).</p>
-<p>O texto não conta o que Isaque sentiu no altar. Ele não grita, não foge, não resiste. A Bíblia relata apenas que ele foi amarrado e colocado sobre a lenha. Quando o anjo do Senhor deteve a mão de Abraão, havia um carneiro preso pelos chifres numa moita (Gn 22:13). Abraão chamou aquele lugar de “O Senhor Proverá” (<i>Yahweh Yireh</i>, Gn 22:14).</p>
-<p>Este episódio ensinou a Isaque, de um jeito que nenhuma aula ensinaria, uma coisa: <b>Deus provê, e Deus é dono da promessa</b>. Isso não aparece como lição de livro. Aparece como memória de alguém que viu a provisão chegar na última hora. Vale guardar esse detalhe para lá na frente, quando Isaque estiver diante de poços entupidos.</p>
-
-<h3>C) A perda de Sara e o casamento com Rebeca (Gênesis 23; 24)</h3>
-<p>Sara morreu em Hebron aos 127 anos, e Abraão comprou a caverna de Macpela para sepultá-la (Gn 23). O texto de Gênesis 24 conta que, depois disso, Abraão enviou o seu servo mais antigo a procurar uma esposa para Isaque entre os parentes, e não entre os povos de Canaã. O servo orou, e Deus guiou a escolha: Rebeca.</p>
-<p>A cena do encontro é discreta e bonita. Isaque tinha voltado de Beer-Laai-Roi, e uma tarde estava no campo, <i>suach</i> (שׂוּחַ, H7742), um verbo raro que muitas traduções entendem como “meditar” ou “orar”, embora o sentido exato seja discutido. Ele ergueu os olhos e viu os camelos chegando (Gn 24:63). Rebeca viu o homem e desceu do camelo. Depois, Isaque a levou para a tenda de sua mãe, Sara, <span class="versiculo">“e amou-a; assim se consolou depois da morte de sua mãe”</span> (Gn 24:67, resumo). O texto diz com simplicidade que Isaque, depois de perder a mãe, encontrou consolo no casamento. É uma das poucas vezes em que a Bíblia diz que um patriarca amou a sua esposa.</p>
-<p>Repare que o texto menciona um poço antes mesmo do encontro: Isaque vinha de <b>Beer-Laai-Roi</b> (בְּאֵר לַחַי רֹאִי, H883), “o poço do Vivente que me vê”. Foi o poço onde Agar, no deserto, encontrou o Deus que a viu (Gn 16:13-14). Isaque era, por assim dizer, um homem que vivia junto de poços com história.</p>
-
-<h3>D) A morte de Abraão e a espera por filhos (Gênesis 25:7-26)</h3>
-<p>Abraão morreu aos 175 anos, e foi sepultado junto de Sara por Isaque e Ismael (Gn 25:7-10). O texto registra um detalhe que merece atenção: depois da morte de Abraão, <span class="versiculo">“Deus abençoou Isaque, seu filho”</span> (Gn 25:11, paráfrase). A bênção não terminou com o pai. Ela continuou.</p>
-<p>A família enfrentou, então, outra espera longa. Rebeca era estéril. Isaque <b>orou intensamente</b> ao Senhor por ela. O verbo é <i>'athar</i> (עָתַר, H6279), que carrega a ideia de insistir, de suplicar com perseverança (Gn 25:21). Deus ouviu, e Rebeca engravidou de gêmeos. A gravidez foi difícil, e Rebeca foi consultar o Senhor, que lhe disse que dois povos estavam em seu ventre e que o mais velho serviria ao mais novo (Gn 25:22-23). Esaú e Jacó nasceram quando Isaque tinha 60 anos (Gn 25:26). Ou seja, Isaque esperou 20 anos desde o casamento até ter filhos.</p>
-<p>Repare no padrão: o pai dele esperou para ter filho, e ele também. Ambos oraram, e ambos viram Deus responder. A diferença é que Isaque não tentou “ajudar” Deus como Abraão tentou com Agar. Ele orou e esperou. Esse é um traço bonito do caráter dele.</p>
-
-<h3>E) A fome, a ordem de Deus e o erro repetido (Gênesis 26:1-11)</h3>
-<p>Veio uma fome sobre a terra, diferente daquela do tempo de Abraão (Gn 26:1). Isaque foi para Gerar, para a terra do rei Abimeleque. Era uma região de passagem para quem fugia da fome em direção ao Egito. Mas Deus lhe apareceu e deu uma ordem clara: <span class="versiculo">“Não desças ao Egito; habita na terra que eu te disser”</span> (Gn 26:2). Em outras palavras: fique aqui, onde você parece ter menos razão para ficar.</p>
-<p>Junto com a ordem veio a promessa. Deus renovou com Isaque o mesmo juramento que tinha feito a Abraão: terra, descendência numerosa e bênção para todas as nações (Gn 26:3-5). O texto diz que Isaque <b>obedeceu</b>: “habitou em Gerar” (Gn 26:6). Ele ficou.</p>
-<p>E então vem o episódio que mostra que Isaque não era perfeito. Com medo de que os homens do lugar o matassem por causa da beleza da sua esposa, ele disse que Rebeca era sua irmã, exatamente a mentira que seu pai tinha contado em outras ocasiões (Gn 26:7; compare com 12:13 e 20:2). Abimeleque viu, da janela, Isaque e Rebeca juntos, e percebeu que eram marido e mulher. Chamou Isaque, repreendeu-o e proibiu seu povo de tocar nos dois (Gn 26:8-11). Veja a ironia: o rei pagão defendeu a esposa e a honra de Isaque, enquanto Isaque, o homem da promessa, tinha tentado se proteger com uma mentira.</p>
-<p>A Bíblia não esconde isso. Isaque herdou do pai a fé e também os mesmos tropeços. É um retrato honesto: o filho da promessa também precisava de graça.</p>
-
-<h3>F) A bênção, a inveja e os poços entupidos (Gênesis 26:12-18)</h3>
-<p>Aqui entra o nosso texto-chave. Isaque semeou na terra onde estava, e <span class="versiculo">“no mesmo ano colheu cem por um”</span> (Gn 26:12). O texto afirma com todas as letras que <b>o Senhor o abençoou</b>. Ele ficou rico, e o texto repete a ideia: foi crescendo até ficar muito poderoso (Gn 26:13). Tinha rebanhos, gado e muitos servos (Gn 26:14).</p>
-<p>E aí a Bíblia revela algo que a nossa experiência confirma: <b>a bênção de Deus atrai a inveja dos outros</b>. O versículo 14 termina dizendo que os filisteus tiveram inveja dele. Foi então que, de uma só vez, taparam todos os poços que os servos de Abraão tinham cavado (Gn 26:15). Veja as palavras do texto: tapar (<i>satam</i>, סָתַם, H5640) e encher (<i>male</i>, מָלֵא, H4390) de terra (<i>'afar</i>, עָפָר, H6083). Os poços não foram destruídos nem aterrados com rochas gigantes. Foram <b>entulhados</b>: cobertos de terra, escondidos. A água continuava lá embaixo. Só ninguém conseguia mais chegar a ela.</p>
-<p>Em seguida, o rei Abimeleque disse a Isaque: <span class="versiculo">“Vai-te de entre nós, porque muito mais poderoso te tornaste do que nós”</span> (Gn 26:16). Isaque poderia ter brigado, poderia ter reagido com a força que agora tinha. Mas o texto diz que ele saiu e foi acampar no vale de Gerar (Gn 26:17). Não houve revide.</p>
-<p>Então vem a atitude do versículo 18. Isaque <b>voltou</b> (<i>shuv</i>, שׁוּב, H7725, “retornar, fazer de novo”) e <b>cavou</b> (<i>chafar</i>, חָפַר, H2658) outra vez os poços (<i>be'er</i>, בְּאֵר, H875) que o pai havia aberto e os filisteus haviam entupido. E fez mais uma coisa: deu aos poços os mesmos nomes que seu pai havia dado (Gn 26:18). Ele não inventou nomes novos para se apresentar como autor da obra. Fez questão de dizer: este é o poço de Abraão, é a mesma fonte, é a mesma promessa.</p>
-
-<div class="caixa-imagem">[IMAGEM 3 – Servos de Isaque retirando terra de um poço antigo]</div>
-
-<h3>G) Esek, Sitna e Reobote: o caminho da paz (Gênesis 26:19-22)</h3>
-<p>Os servos de Isaque também abriram poços novos no vale e encontraram <b>“água viva”</b>, literalmente <i>mayim chayyim</i> (מַיִם חַיִּים, H4325 e H2416), isto é, água corrente, que brota do fundo (Gn 26:19). Mas os pastores de Gerar brigaram por ela e disseram que a água era deles. Isaque chamou aquele poço de <b>Esek</b> (עֵשֶׂק, H6230), “disputa”, porque ali eles brigaram com ele (Gn 26:20).</p>
-<p>Cavaram outro, e por esse também brigaram. Chamou-o de <b>Sitna</b> (שִׂטְנָה, H7856), “inimizade” ou “acusação” (Gn 26:21). Isaque não ficou para disputar. Mudou-se de novo e cavou outro poço. Dessa vez ninguém brigou. Ele o chamou de <b>Reobote</b> (רְחֹבוֹת, H7344), “largueza, lugar espaçoso”, e disse: <span class="versiculo">“Agora o Senhor nos deu lugar, e frutificaremos na terra”</span> (Gn 26:22).</p>
-<p>Repare na sequência dos nomes: disputa, inimizade, largueza. O caminho de Isaque foi de conflito para espaço, e ele chegou lá <b>sem ganhar uma única briga</b>. Foi cedendo, cavando, seguindo em frente, e chegou ao lugar de descanso. É uma lição de vida madura que o texto entrega sem precisar explicar.</p>
-
-<h3>H) Berseba: Deus aparece, o altar vem antes do poço (Gênesis 26:23-33)</h3>
-<p>De Reobote, Isaque subiu para Berseba. E ali, <b>na mesma noite</b>, o Senhor lhe apareceu e disse: <span class="versiculo">“Eu sou o Deus de Abraão, teu pai; não temas, porque eu sou contigo, e te abençoarei”</span> (Gn 26:24). Foi a segunda vez em Gênesis 26 que Deus falou com ele. Logo depois de ter saído de lugar em lugar, evitando brigas, Isaque ouviu a palavra de que precisava: “não temas”.</p>
-<p>A resposta de Isaque aparece numa ordem que ensina muito: primeiro, <b>edificou um altar</b> e invocou o nome do Senhor. Depois, armou a sua tenda. E só então os servos cavaram um poço (Gn 26:25). Observe a sequência: altar, tenda, poço. A adoração veio antes da moradia, e a moradia antes da água. Para ele, a água só fazia sentido onde Deus já tinha sido honrado.</p>
-<p>O rei Abimeleque, o mesmo que o havia mandado embora, chegou depois, acompanhado de Auzate, seu conselheiro, e de Ficol, chefe do seu exército, pedindo um pacto de paz (Gn 26:26-31). Isaque perguntou por que vinham procurá-lo se o tinham expulsado (Gn 26:27). A resposta dos visitantes foi: <span class="versiculo">“Vimos claramente que o Senhor é contigo”</span> (Gn 26:28, resumo). Fizeram um pacto, comeram juntos e foram embora em paz.</p>
-<p>Naquele mesmo dia, os servos de Isaque vieram dizer que tinham achado água no poço que acabavam de cavar. O lugar recebeu o nome de <b>Seba</b>, e a cidade ficou conhecida como <b>Berseba</b> (<i>Be'er Sheva</i>), nome que está ligado ao “juramento” (<i>shavu'ah</i>, שְׁבוּעָה, H7621) e ao número “sete” (<i>sheva'</i>, שֶׁבַע, H7651), até os dias do autor (Gn 26:32-33). O nome carrega a ideia de “o poço do juramento”.</p>
-
-<h3>I) A casa dividida e a velhice (Gênesis 26:34-28:9)</h3>
-<p>No final de Gênesis 26, a Bíblia traz uma nota amarga: Esaú, aos 40 anos, casou-se com duas mulheres hititas, e elas foram <b>“amargura de espírito”</b> para Isaque e Rebeca (Gn 26:34-35). Os pais mais velhos sentiram dor com as escolhas do filho e com as noras que entraram na casa. O texto não explica mais, mas deixa claro que o sofrimento era real.</p>
-<p>No capítulo 27, a cena é conhecida. Isaque, já velho e com a vista enfraquecida (Gn 27:1), quis abençoar Esaú, o filho que ele preferia, por causa do gosto pela caça (Gn 25:28). Rebeca ouviu a conversa e ajudou Jacó a enganar o pai. Jacó se apresentou como Esaú e recebeu a bênção. Quando Esaú chegou, Isaque <b>tremeu muito, em grande estremecimento</b> (Gn 27:33). Mesmo assim, ele não desfez a bênção dada a Jacó.</p>
-<p>Vale ver o quadro todo: um pai que tinha preferência por um filho, uma mãe que tinha preferência pelo outro, uma palavra de Deus sobre o futuro dos dois meninos que tinha sido dada a Rebeca (Gn 25:23), e dois filhos que cresceram em lados opostos. Foi uma casa que ficou ferida. Aqui a Bíblia não maquia nada. A mesma família que viu Deus agir com poder também viveu rachaduras profundas.</p>
-<p>Mesmo assim, no final do capítulo 27 e no início do 28, Isaque faz algo importante: chama Jacó, abençoa-o <b>conscientemente</b> e o envia à casa de Labão, na Padã-Arã, para buscar esposa entre a família (Gn 28:1-5). Ele disse a Jacó: <span class="versiculo">“Que o Deus Todo-Poderoso te abençoe”</span> (Gn 28:3, resumo). Hebreus 11:20 resume: <b>“Pela fé Isaque abençoou a Jacó e a Esaú, acerca das coisas futuras.”</b> No fim, apesar das falhas, o velho Isaque agiu pela fé.</p>
-
-<h3>J) O fim da vida (Gênesis 35:27-29)</h3>
-<p>Isaque viveu ainda muitos anos depois dessas cenas. Jacó voltou para casa, e o texto o encontra em Manre, perto de Hebron. Isaque morreu aos 180 anos e foi <span class="versiculo">“recolhido ao seu povo, velho e farto de dias”</span> (Gn 35:29). Esaú e Jacó, os filhos que tinham brigado tanto, se juntaram para enterrar o pai. Aquele que passou a vida cavando poços entre disputas terminou cercado pelos filhos, em paz.</p>
-
-<div class="caixa-imagem">[IMAGEM 4 – Isaque idoso, sentado à entrada da tenda, na região de Hebron]</div>
-
-<!-- ============ 4 ============ -->
-<h2 id="obras">4. Os Milagres e Obras de Deus na vida de Isaque</h2>
-<p>Isaque não é conhecido por milagres espetaculares como os de Elias ou Moisés. O que a Bíblia mostra na vida dele são as <b>obras de Deus que sustentam a promessa</b>: respostas, aparições, provisão. Veja cada uma delas, com o texto e como aconteceu.</p>
+<h3>D) A Descendência: Os Herdeiros (Gênesis 25)</h3>
 <ul class="limpa">
-  <li><b>O nascimento pela promessa (Gn 21:1-2).</b> Sara era idosa e antes estéril. O texto diz que o Senhor “visitou” Sara e ela concebeu e deu à luz na época que Deus havia dito. Foi uma obra de Deus que não dependeu de nenhum esforço humano.</li>
-  <li><b>A provisão no monte Moriá (Gn 22:9-14).</b> Quando Abraão levantou a faca, o anjo do Senhor o chamou do céu e o impediu. Abraão olhou e viu um carneiro preso pelos chifres numa moita. Ele ofereceu o carneiro no lugar do filho e chamou o lugar de “O Senhor Proverá”. A provisão chegou no momento exato, sem aviso prévio.</li>
-  <li><b>A escolha da esposa (Gn 24:12-27, 62-67).</b> O servo de Abraão orou pedindo um sinal, e antes de terminar a oração Rebeca apareceu e fez exatamente o que ele tinha pedido. Deus guiou a viagem do servo e o encontro do casal.</li>
-  <li><b>A oração respondida por filhos (Gn 25:21).</b> Isaque orou insistentemente por Rebeca, que era estéril. O texto simplesmente afirma que o Senhor se deixou invocar por ele, e ela concebeu.</li>
-  <li><b>A aparição na fome (Gn 26:2-5).</b> Deus lhe apareceu, proibiu a descida ao Egito e renovou todas as promessas. A palavra veio antes da solução.</li>
-  <li><b>A colheita de cem por um (Gn 26:12).</b> Isaque semeou em plena fome, na terra onde Deus mandou ficar, e o texto diz que ele colheu cem vezes mais, porque o Senhor o abençoou.</li>
-  <li><b>O lugar espaçoso em Reobote (Gn 26:22).</b> Depois de dois poços disputados, o terceiro foi sem briga. Isaque reconheceu a mão de Deus: foi o Senhor quem lhe deu lugar.</li>
-  <li><b>A aparição em Berseba e a água na mesma noite (Gn 26:24, 32).</b> Deus lhe apareceu na noite em que ele chegou, com a mensagem “não temas”, e no mesmo dia em que o pacto foi feito os servos acharam água no poço novo.</li>
-  <li><b>O pacto de paz com Abimeleque (Gn 26:26-31).</b> Aquele que o tinha expulsado voltou para fazer aliança. Os visitantes mesmos disseram que viram claramente que Deus estava com Isaque.</li>
-  <li><b>A promessa preservada apesar das falhas da família (Gn 27–28).</b> No meio de um engano e de uma briga entre irmãos, Deus manteve a linha da promessa, que passou por Jacó. Isso não justifica o engano, mas mostra que o plano de Deus não foi derrubado pelo erro humano.</li>
-</ul>
-
-<!-- ============ 5 ============ -->
-<h2 id="palavra">5. A Palavra no Centro do Avivamento</h2>
-<p>Em toda a vida de Isaque, o que sustenta cada passo é a <b>palavra que Deus falou</b>. Olhe como a Palavra aparece em cada ponto-chave:</p>
-<ul class="limpa">
-  <li><b>A palavra antes do filho.</b> Isaque nasceu porque Deus falou primeiro. Sem a promessa, ele não existiria (Gn 17:19; 21:1).</li>
-  <li><b>A palavra antes da decisão.</b> Quando a fome veio, a saída lógica era descer ao Egito. Deus falou: “Não desças” (Gn 26:2). Isaque obedeceu à palavra, e não à lógica. O resultado foi a colheita de cem por um.</li>
-  <li><b>A palavra que repete a promessa.</b> Deus não deu a Isaque uma promessa nova. Repetiu a promessa de Abraão: “o juramento que jurei a Abraão, teu pai” (Gn 26:3). Isaque não precisava de uma revelação diferente. Precisava da mesma, vivida por ele.</li>
-  <li><b>A palavra “não temas”.</b> Em Berseba, depois de uma sequência de perdas de poços e de mudanças, o Senhor lhe disse: “Eu sou o Deus de Abraão... não temas” (Gn 26:24). O que sustentou Isaque não foi a vitória, foi a palavra.</li>
-  <li><b>A palavra que o fez cavar de volta.</b> Isaque não reabriu os poços por nostalgia. Ele voltou ao que Deus tinha dado ao seu pai, porque sabia que ali estava a promessa. O poço de Abraão era o poço da aliança.</li>
+  <li><b>Esaú:</b> O primogênito. Seus filhos deram origem aos <span class="destaque-termo">edomitas</span> (Gn 36).</li>
+  <li><b>Jacó:</b> O filho mais novo, que herdou a promessa da aliança. Gerou doze filhos homens que formaram as <span class="destaque-termo">Doze Tribos de Israel</span>.</li>
 </ul>
 
 <div class="caixa">
-  <p><b>O fio que liga tudo à nossa aula:</b> o avivamento, na vida de Isaque, não foi uma água nova que apareceu. Foi a água de sempre, que voltou a ser alcançada porque alguém decidiu <b>cavar de novo</b> o que a Palavra de Deus já tinha dado.</p>
+  <p><b>Contexto na História da Redenção:</b> A linhagem da promessa passa exclusivamente por Isaque, segue por Jacó, afunila na tribo de Judá, chega ao rei Davi e culmina nas genealogias de <b>Jesus Cristo</b> (Mt 1:2; Lc 3:34).</p>
 </div>
 
-<h3>A mesma água, em toda a Bíblia</h3>
-<p>A imagem da água viva que Isaque reabriu atravessa a Bíblia inteira. Veja alguns textos que valem a leitura com calma:</p>
+<!-- ============ 3 ============ -->
+<h2 id="contexto">3. Contexto Histórico e Geográfico</h2>
+<p>Isaque pertence ao período dos patriarcas, situado no início do segundo milênio antes de Cristo. A história gira em torno de uma família que vive em tendas, com rebanhos, sem terra própria, no meio de povos que já moram em cidades e que controlam as fontes de água.</p>
+
+<h3>A Ponte Geográfica: onde tudo isso fica hoje</h3>
 <ul class="limpa">
-  <li><b>Salmo 42:1-2 e Salmo 63:1.</b> O salmista tem sede de Deus como o cervo tem sede de águas correntes. É o mesmo desespero do nosso tema.</li>
-  <li><b>Isaías 12:3.</b> “Com alegria tirareis águas das fontes da salvação.” A água de Deus é para tirar, e tirar sempre com alegria.</li>
-  <li><b>Jeremias 2:13.</b> Deus lamenta que o seu povo tenha deixado a “fonte de águas vivas” para cavar “cisternas rotas”. É o contrário do que Isaque fez: voltou à fonte.</li>
-  <li><b>Amós 8:11-12.</b> O profeta fala de uma fome e de uma sede, “não de pão, nem de água, mas de ouvir as palavras do Senhor”. A fome mais grave é a da Palavra.</li>
-  <li><b>Mateus 5:6.</b> “Bem-aventurados os que têm fome e sede de justiça, porque eles serão fartos.” Jesus chama de felizes os que desejam com desespero.</li>
-  <li><b>João 4:13-14 e João 7:37-38.</b> Jesus se apresenta como a fonte que não seca e que brota para a vida eterna. É a conexão direta com o Estágio 06: a samaritana largou o cântaro porque encontrou a água. Em Isaque, vemos o que fazer quando a água parece ter sido tapada.</li>
-  <li><b>Gálatas 4:28.</b> Paulo escreve que somos, “como Isaque, filhos da promessa”. A história dele também é a nossa.</li>
+  <li><b>Berseba:</b> Fica a cerca de 80 km ao sul de Jerusalém. Marca o limite sul do território onde os patriarcas circulavam.</li>
+  <li><b>Gerar:</b> Região a noroeste de Berseba, na direção de Gaza.</li>
+  <li><b>Clima:</b> É uma região semiárida. A chuva é escassa. É um lugar onde cada gota guardada faz diferença.</li>
+  <li><b>Rotas:</b> A estrada que seguia a costa em direção ao Egito passava por Gerar.</li>
+</ul>
+
+<h3>O que era um poço naquela época</h3>
+<p><b>Fonte histórica de contexto.</b> Em regiões áridas do Oriente Antigo, um poço era cavado à mão até chegar à água do subsolo. Era um trabalho caro, e o poço passava a valer como escritura de posse. Por isso, <b>tapar um poço</b> era um ato de agressão e declaração de inimizade (2 Reis 3:19, 25). Os filisteus não fizeram vandalismo à toa: disseram "vocês não têm direito a esta água".</p>
+
+<div class="caixa-imagem">
+  <img src="LINK_IMAGEM_2" alt="Poço antigo com parede de pedras no Neguev">
+</div>
+
+<!-- ============ 4 ============ -->
+<h2 id="biografia">4. Biografia em ordem cronológica</h2>
+
+<h3>A) O filho que ninguém esperava (Gênesis 21:1-8)</h3>
+<p>Isaque nasceu depois de uma espera de décadas, na hora marcada por Deus. Abraão o chamou de Isaque ("ele ri"). Antes dele, o riso de Abraão e Sara era de dúvida; depois, de gratidão. Aos poucos, a casa ficou dividida, e Ismael zombou de Isaque, resultando na partida de Agar e Ismael.</p>
+
+<h3>B) O monte Moriá (Gênesis 22:1-19)</h3>
+<p>Deus pediu a Abraão que oferecesse Isaque. Isaque fez a pergunta: <span class="versiculo">“Onde está o cordeiro?”</span> (Gn 22:7). A resposta de Abraão foi: <span class="versiculo">“Deus proverá para si o cordeiro”</span>. O anjo interveio e proveu o carneiro. Este episódio ensinou a Isaque que Deus provê e é o dono da promessa.</p>
+
+<h3>C) A perda de Sara e o casamento com Rebeca (Gênesis 23; 24)</h3>
+<p>Após a morte de Sara, o servo de Abraão buscou Rebeca. Isaque a levou para a tenda da mãe <span class="versiculo">“e amou-a; assim se consolou”</span> (Gn 24:67).</p>
+
+<h3>D) A morte de Abraão e a espera por filhos (Gênesis 25:7-26)</h3>
+<p>Após a morte de Abraão, <span class="versiculo">“Deus abençoou Isaque”</span>. Rebeca era estéril, mas Isaque orou intensamente (<i>'athar</i>), e Deus ouviu. Esaú e Jacó nasceram quando Isaque tinha 60 anos.</p>
+
+<h3>E) A fome e a ordem de Deus (Gênesis 26:1-11)</h3>
+<p>Veio a fome, e Deus ordenou: <span class="versiculo">“Não desças ao Egito; habita na terra que eu te disser”</span> (Gn 26:2). Isaque obedeceu, mas cometeu o mesmo erro de seu pai, dizendo que Rebeca era sua irmã, por medo. O rei Abimeleque o repreendeu.</p>
+
+<h3>F) A bênção, a inveja e os poços entupidos (Gênesis 26:12-18)</h3>
+<p>Isaque semeou e <span class="versiculo">“colheu cem por um”</span> (Gn 26:12). Sua riqueza atraiu a inveja dos filisteus, que entulharam os poços de Abraão com terra. Abimeleque pediu que Isaque fosse embora. Sem revidar, Isaque <b>voltou e cavou</b> outra vez os poços, dando-lhes os mesmos nomes que seu pai lhes dera (Gn 26:18).</p>
+
+<div class="caixa-imagem">
+  <img src="LINK_IMAGEM_3" alt="Servos de Isaque retirando terra de um poço antigo">
+</div>
+
+<h3>G) Esek, Sitna e Reobote (Gênesis 26:19-22)</h3>
+<p>Seus servos cavaram e acharam água, mas os filisteus brigaram pelos poços Esek (disputa) e Sitna (inimizade). Isaque cedeu e cavou um terceiro, Reobote (largueza), onde ninguém brigou: <span class="versiculo">“Agora o Senhor nos deu lugar”</span>.</p>
+
+<h3>H) Berseba: o altar antes do poço (Gênesis 26:23-33)</h3>
+<p>Em Berseba, Deus lhe apareceu: <span class="versiculo">“não temas”</span>. A primeira ação de Isaque foi edificar um altar. Só depois armou a tenda e cavou o poço. Abimeleque veio buscar paz, reconhecendo que Deus estava com ele.</p>
+
+<h3>I) O fim da vida (Gênesis 35:27-29)</h3>
+<p>Após a divisão familiar envolvendo Esaú e a bênção dada a Jacó, Isaque abençoou Jacó pela fé. Ele morreu aos 180 anos, <span class="versiculo">“farto de dias”</span>, e foi sepultado por seus filhos Esaú e Jacó.</p>
+
+<div class="caixa-imagem">
+  <img src="LINK_IMAGEM_4" alt="Isaque idoso, sentado à entrada da tenda, na região de Hebron">
+</div>
+
+<!-- ============ 5 ============ -->
+<h2 id="obras">5. Os Milagres e Obras de Deus</h2>
+<ul class="limpa">
+  <li><b>O nascimento (Gn 21:1-2):</b> A obra de Deus no tempo marcado.</li>
+  <li><b>A provisão (Gn 22:9-14):</b> O carneiro providenciado em Moriá.</li>
+  <li><b>A escolha (Gn 24:12-27):</b> Deus guiou o servo até Rebeca.</li>
+  <li><b>A oração respondida (Gn 25:21):</b> Isaque intercedeu pela esterilidade de Rebeca.</li>
+  <li><b>A aparição na fome (Gn 26:2-5):</b> A renovação das promessas e proibição de ir ao Egito.</li>
+  <li><b>A colheita (Gn 26:12):</b> Cem por um, mesmo em tempo de fome.</li>
+  <li><b>A palavra (Gn 26:24):</b> A aparição em Berseba dizendo "não temas".</li>
+  <li><b>O pacto de paz (Gn 26:26-31):</b> Os inimigos recuando diante da evidência de Deus na vida de Isaque.</li>
 </ul>
 
 <!-- ============ 6 ============ -->
-<h2 id="aplicacao">6. Aplicação Homilética</h2>
-<p>Estes três pontos podem ser usados em uma pregação, em uma conversa em grupo ou na leitura pessoal. Vão do texto para a vida de quem já caminhou muito com o Senhor.</p>
+<h2 id="palavra">6. A Palavra no Centro do Avivamento</h2>
+<p>O que sustenta cada passo de Isaque é a <b>palavra que Deus falou</b>. A palavra veio antes do filho, antes da decisão de ficar em Gerar, e repetiu a mesma promessa feita a Abraão. A palavra o encorajou em Berseba e o impulsionou a cavar de volta os poços da aliança.</p>
 
-<h3>Ponto 1 – O que entulhou o poço não foi o inimigo de fora, foi o tempo</h3>
-<p>O texto diz que os filisteus taparam os poços (Gn 26:15). Mas, na vida de quem já tem muitos anos de caminhada, o “entulho” raramente chega de uma vez só. Vai caindo terra, aos poucos: uma decepção com alguém da igreja, uma oração que ficou sem resposta durante anos, a rotina dos cultos que virou obrigação, a preocupação com as contas do mês que toma o lugar da oração, uma discussão em casa que deixou o clima pesado, a saúde que pede atenção, um filho ou filha que seguiu por um caminho que o coração não queria.</p>
-<p>Repare no que o texto <b>não</b> diz: não diz que o poço secou. Diz que foi entulhado. A água continuava lá embaixo. O mesmo acontece com a vida espiritual de muita gente: a fonte não acabou, está coberta. Muitos irmãos pensam “eu já tive minha fase de avivamento, acabou”. A Bíblia responde: o poço de Abraão ainda existe, e a água continua no mesmo lugar.</p>
-<div class="pensar"><b>Para pensar:</b> Qual foi a primeira “terra” que caiu sobre o seu poço? Foi uma decepção, uma perda, uma correria? Quando foi a última vez que você sentiu a água de Deus por perto?</div>
+<div class="caixa">
+  <p>O avivamento na vida de Isaque não foi uma água nova que apareceu. Foi a água de sempre, alcançada porque alguém decidiu <b>cavar de novo</b> o que a Palavra de Deus já tinha dado.</p>
+</div>
 
-<h3>Ponto 2 – Não se cava um poço novo; volta-se ao poço do pai</h3>
-<p>Quando a fonte parece seca, a tentação é procurar uma novidade: um método diferente, uma experiência diferente, um lugar diferente, uma pessoa diferente. Isaque fez o contrário. A palavra do versículo 18 é <i>shuv</i>, “voltar”. Ele voltou aos mesmos lugares, abriu os mesmos poços e deu os mesmos nomes. Isso quer dizer que o que precisamos não é de uma novidade, é de <b>recuperar</b> o que Deus já nos deu: a oração de todo dia, a leitura da Palavra, o culto de verdade, a comunhão com os irmãos, a conversa sincera com o Senhor.</p>
-<p>Atenção a duas coisas. Primeiro, isso não é saudosismo. Isaque não ficou chorando pelos “bons tempos de Abraão”. Ele pegou ferramentas e cavou. Segundo, isso também não é culpa. O texto não manda ninguém se punir porque o poço entupiu. Manda cavar. E cavar tem um sentido prático: é decidir, num dia comum, parar um tempo, ler um Salmo, abrir a boca em oração, mesmo sem sentir nada, porque o que sustenta é a promessa, e não a emoção do momento.</p>
-<div class="pensar"><b>Para pensar:</b> Qual foi o “poço” da sua caminhada que mais deu água ao longo dos anos: uma oração, um hábito, um lugar, um irmão? O que seria “cavar de novo” esse poço esta semana, de um jeito simples e possível?</div>
-
-<h3>Ponto 3 – Quem cava com paz chega a Reobote</h3>
-<p>Isaque cavou três vezes e teve duas brigas. O texto mostra que ele não tentou ganhar nenhuma. A cada disputa, foi um pouco mais longe, até chegar ao lugar onde ninguém brigava mais. Na vida madura, isso fala de coisas bem concretas: a conversa difícil dentro de casa, o desentendimento com um filho ou uma nora, a mágoa guardada com um irmão da igreja ou com um parente. Não é fraqueza ceder o lugar. Isaque cedeu e ainda assim foi “muito poderoso”, segundo o próprio rei.</p>
-<p>E repare em Berseba. Foi ali, depois de tantas mudanças, que Deus lhe apareceu na mesma noite e disse “não temas”. A água que Isaque tanto procurava não veio só do poço. Veio da presença do Senhor, e o poço veio depois. Isaque edificou um altar, armou a tenda e só então cavou. Quem coloca a adoração em primeiro lugar descobre que Deus cuida do resto: o sustento, a paz em casa, o descanso.</p>
-<div class="pensar"><b>Para pensar:</b> Existe uma “disputa” em que você tem insistido em ganhar? Será que Deus está chamando você para um “Reobote”, um lugar espaçoso, onde o coração descanse?</div>
-
-<h3>Aplicação para a vida madura</h3>
-<p>Quem já viveu muitos anos conhece bem a sensação de que “a água de antigamente” não é mais a mesma. Isaque nos ensina três coisas sobre isso:</p>
+<h3>A mesma água na Bíblia</h3>
 <ul class="limpa">
-  <li><b>Não é vergonha ter poço entupido.</b> O próprio Isaque, homem de fé, também mentiu, teve preferência entre os filhos e viu a casa se dividir. Isso não o desqualificou. A graça de Deus alcança quem reconhece o que precisa de limpeza.</li>
-  <li><b>O avivamento começa com uma decisão pequena e prática.</b> Não é um grande evento. É ir ao lugar do poço e começar a tirar terra: uma oração curta, mas verdadeira; um capítulo da Bíblia lido com calma; uma conversa de reconciliação; um culto vivido com o coração e não só com o corpo.</li>
-  <li><b>Deus responde ao desespero.</b> Quando a Bíblia fala de fome e de sede, está falando de um desejo que não se contenta com pouco. Isaque deve ter sentido isso diante de poços cheios de terra. Quem tem sede de verdade, cava.</li>
+  <li><b>Salmos 42:1-2 e 63:1:</b> A sede de Deus como o cervo pelas águas.</li>
+  <li><b>Jeremias 2:13:</b> O lamento pelas cisternas rotas em vez da fonte de águas vivas.</li>
+  <li><b>João 4:13-14 e 7:37-38:</b> Jesus como a fonte que não seca (conexão com o Estágio 06).</li>
 </ul>
 
 <!-- ============ 7 ============ -->
-<h2 id="apoio">7. Personagens de Apoio</h2>
+<h2 id="aplicacao">7. Aplicação Homilética</h2>
 
-<h3>Abraão (o pai dos poços)</h3>
-<p>O pai de Isaque é o homem que abriu os poços originais, por meio de seus servos (Gn 26:15, 18). Foi quem recebeu a promessa de Deus, quem foi chamado de Ur dos caldeus para uma terra desconhecida (Gn 12:1-4), e quem quase sacrificou o filho no monte Moriá (Gn 22). Morreu aos 175 anos e foi sepultado em Macpela (Gn 25:7-10). A herança que deixou a Isaque não foi só riqueza: foi uma fé, uma aliança e uma lista de poços.</p>
-
-<h3>Sara (a mãe que riu)</h3>
-<p>Mãe de Isaque, morreu aos 127 anos em Hebron (Gn 23:1-2). O texto diz que o consolo de Isaque, depois da morte dela, foi o amor de Rebeca, que ele levou para a tenda da mãe (Gn 24:67). Sara foi quem pediu a saída de Agar e Ismael (Gn 21:10) e é lembrada em Hebreus 11:11 como alguém que considerou fiel Aquele que lhe tinha feito a promessa.</p>
-
-<h3>Rebeca (a esposa)</h3>
-<p>Neta de Naor, irmão de Abraão, e esposa de Isaque (Gn 24:15, 67). Foi corajosa para deixar a família e partir com o servo de Abraão (Gn 24:57-58). Foi a mulher que Isaque amou e por quem orou (Gn 24:67; 25:21). Porém, no capítulo 27, planejou o engano em favor de Jacó, o filho de sua preferência. A Bíblia mostra Rebeca inteira, com a fé e com os erros. Foi sepultada em Macpela (Gn 49:31).</p>
-
-<h3>Abimeleque, Auzate e Ficol (os vizinhos de Gerar)</h3>
-<p>Abimeleque é chamado “rei dos filisteus” em Gerar (Gn 26:1, 8). Ele repreendeu Isaque pela mentira e protegeu o casal (Gn 26:9-11). Depois o mandou embora por inveja do seu poder (Gn 26:16). Por fim, buscou uma aliança de paz, acompanhado por Auzate e por Ficol, chefe do exército (Gn 26:26). Um episódio parecido, com o mesmo nome de rei e o mesmo cenário, aparece na vida de Abraão (Gn 20; 21:22-34). Os estudiosos entendem que “Abimeleque” pode ter sido um título ou nome repetido na região, e não necessariamente o mesmo homem. O texto bíblico não esclarece isso, e não precisamos resolver a questão para entender o que está sendo ensinado.</p>
-
-<h3>Esaú e Jacó (os filhos)</h3>
-<p>Esaú, o primogênito, era caçador e amado por Isaque (Gn 25:27-28). Casou-se com mulheres hititas, o que causou “amargura de espírito” aos pais (Gn 26:34-35). Jacó, o filho de Rebeca, era tranquilo e ficava nas tendas. Recebeu a bênção por meio do engano e, depois de muitos anos de luta, tornou-se Israel (Gn 32:28). Os dois sepultaram o pai juntos (Gn 35:29).</p>
-
-<h3>Agar e Ismael (a parte da família que partiu)</h3>
-<p>Agar, serva egípcia de Sara, foi quem recebeu a revelação do “Deus que me vê” em Beer-Laai-Roi (Gn 16:13-14). Ismael, filho dela com Abraão, foi mandado embora da casa na infância de Isaque (Gn 21:9-14), mas Deus também cuidou dele e lhe prometeu uma grande descendência (Gn 21:17-21). Ismael aparece de novo ao lado de Isaque para sepultar Abraão (Gn 25:9). O texto mostra que a promessa passou por Isaque, mas que o cuidado de Deus não abandonou Ismael.</p>
-
-<h3>Os servos de Isaque (os que cavaram)</h3>
-<p>O texto não dá o nome deles, mas são eles que cavam, que encontram a água viva e que anunciam a água em Berseba (Gn 26:19, 25, 32). Foram os homens e mulheres que, junto com Isaque, fizeram o trabalho que não aparece nos títulos. Em toda obra de Deus, há gente assim.</p>
-
-<!-- ============ 8 ============ -->
-<h2 id="fontes">8. Mapa das Fontes</h2>
-
-<h3>Fonte principal e única regra de fé e prática</h3>
-<ul class="limpa">
-  <li><b>A Bíblia Sagrada.</b> Gênesis 16–28; 35:27-29; Êxodo 13:17; 2 Reis 3:19, 25; 2 Crônicas 3:1; Salmos 42 e 63; Isaías 12:3; Jeremias 2:13; Amós 8:11-12; Mateus 5:6; João 4:13-14 e 7:37-38; Romanos 9:7-9; Gálatas 4:28; Hebreus 11.</li>
-</ul>
-
-<h3>Comentário de apoio (aprovado na Fase 0)</h3>
-<ul class="limpa">
-  <li>Bruce K. Waltke e Cathi J. Fredricks, <i>Genesis: A Commentary</i> (Zondervan, 2001). Comentário evangélico sobre Gênesis.</li>
-</ul>
-
-<h3>Fontes históricas de contexto (não são Escritura)</h3>
-<ul class="limpa">
-  <li>John H. Walton, Victor H. Matthews e Mark W. Chavalas, <i>IVP Bible Background Commentary: Old Testament</i> (InterVarsity Press, 2000). Costumes, poços e vida pastoril no Oriente Antigo.</li>
-  <li>Gordon J. Wenham, <i>Genesis 16–50</i>, Word Biblical Commentary, vol. 2 (Word Books, 1994). Consulta sobre a estrutura e os termos hebraicos de Gênesis 26.</li>
-  <li>Derek Kidner, <i>Genesis</i>, Tyndale Old Testament Commentaries (InterVarsity Press, 1967). Leitura de apoio sobre a vida dos patriarcas.</li>
-  <li>Escavações em Tel Berseba (<i>Tel Be'er Sheva</i>), realizadas pela Universidade de Tel Aviv a partir do fim da década de 1960. Servem apenas para entender a região: seus achados são de época posterior à dos patriarcas.</li>
-</ul>
-
-<div class="caixa">
-  <p><b>Nota de honestidade:</b> as datas, as distâncias e as identificações de lugares citadas nesta página seguem o consenso dos estudiosos e são aproximadas. Onde há debate (como o local exato de Gerar e o uso do termo “filisteus” na época dos patriarcas), o texto indica isso. A palavra final é sempre a da Escritura.</p>
+<div class="pensar">
+  <b>1. O que entulhou o poço foi o tempo.</b><br>
+  O "entulho" espiritual raramente cai de uma só vez. Cai com as decepções, a rotina, o cansaço. A água continua lá embaixo. Qual foi a primeira "terra" que caiu sobre o seu poço?
 </div>
 
+<div class="pensar">
+  <b>2. Volte ao poço do pai.</b><br>
+  Não precisamos de um método novo; precisamos recuperar o que já nos foi dado: oração, leitura, comunhão. Qual hábito simples você pode "cavar" novamente esta semana?
+</div>
+
+<div class="pensar">
+  <b>3. Quem cava com paz chega a Reobote.</b><br>
+  Isaque cedeu nas disputas e chegou a um lugar espaçoso. Existe alguma disputa que você tem insistido em ganhar que está roubando sua paz?
+</div>
+
+<!-- ============ 8 ============ -->
+<h2 id="apoio">8. Personagens de Apoio</h2>
+<ul class="limpa">
+  <li><b>Abraão:</b> O pai que abriu os poços originais e deixou a aliança.</li>
+  <li><b>Sara:</b> A mãe que creu na promessa.</li>
+  <li><b>Rebeca:</b> A esposa corajosa, amada por Isaque.</li>
+  <li><b>Abimeleque, Auzate e Ficol:</b> Os vizinhos de Gerar que testificaram o poder de Deus em Isaque.</li>
+  <li><b>Esaú e Jacó:</b> Os filhos que dividiram a casa, mas que juntos sepultaram o pai.</li>
+  <li><b>Os servos:</b> Os trabalhadores anônimos que cavaram até encontrar água viva.</li>
+</ul>
+
+<!-- ============ 9 ============ -->
+<h2 id="fontes">9. Mapa das Fontes</h2>
+<ul class="limpa">
+  <li><b>Bíblia Sagrada:</b> Gênesis 16–28; 35; Salmos 42, 63; Jeremias 2; João 4, etc.</li>
+  <li><b>Comentário (Aprovado):</b> Bruce K. Waltke, <i>Genesis: A Commentary</i>.</li>
+  <li><b>Fontes Históricas:</b> <i>IVP Bible Background Commentary</i>, Gordon J. Wenham (Word Biblical Commentary).</li>
+</ul>
+
 <footer>
-  Escola Bíblica “A Profundidade da Palavra de Deus” · IEQ Campo Alegre · Expedição Raízes do Avivamento · Estágio 07
+  Escola Bíblica “A Profundidade da Palavra de Deus” <br>
+  IEQ Campo Alegre · Expedição Raízes do Avivamento · Estágio 07
 </footer>
 
 </div>
