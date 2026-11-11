@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acervo de Estudos - A Profundidade da Palavra de Deus</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root { 
+    --azul-escuro: #0f2147; 
+    --amarelo: #ffb800;    
+    --texto: #333333;      
+    --fundo: #f8fafc;      
+    --borda: #e2e8f0;      
+    --branco: #ffffff;
+  }
+  
+  * { box-sizing: border-box; }
+  body { font-family: 'Open Sans', Roboto, Arial, sans-serif; font-size: 18px; line-height: 1.6; color: var(--texto); background: var(--fundo); margin: 0; padding: 0; }
+  .pagina { max-width: 900px; margin: 0 auto; padding: 24px 18px 60px; }
+  
+  h1, h2, h3 { font-family: 'Merriweather', Lora, serif; }
+  
+  /* Cabeçalho principal */
+  header.capa { 
+    text-align: center; 
+    background-color: var(--azul-escuro); 
+    padding: 50px 20px; 
+    border-bottom: 6px solid var(--amarelo); 
+    border-radius: 12px;
+    margin-bottom: 40px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  header.capa .escola { font-size: 15px; letter-spacing: 1px; text-transform: uppercase; color: var(--amarelo); margin: 0 0 6px; font-weight: bold; }
+  header.capa h1 { font-size: 36px; line-height: 1.25; margin: 6px 0; color: var(--branco); }
+  header.capa .sub { font-size: 18px; font-style: italic; color: #cbd5e0; margin: 10px 0 0; }
+  
+  .intro { text-align: center; margin-bottom: 40px; font-size: 19px; color: #4a5568; }
+
+  /* Grid de Estudos */
+  .grid-estudos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Cartão Individual de Estudo */
+  .cartao-estudo {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-left: 6px solid var(--azul-escuro);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cartao-estudo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-left-color: var(--amarelo);
+  }
+  
+  .cartao-estudo .tag {
+    display: inline-block;
+    background-color: var(--fundo);
+    color: var(--azul-escuro);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+    border: 1px solid var(--borda);
+  }
+  
+  .cartao-estudo h2 { margin: 0 0 8px 0; color: var(--azul-escuro); font-size: 24px; }
+  .cartao-estudo p.tema { font-size: 16px; color: #718096; margin: 0 0 20px 0; font-style: italic; }
+  
+  .btn-acessar {
+    display: inline-block;
+    background-color: var(--amarelo);
+    color: var(--azul-escuro);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-align: center;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+  }
+  .btn-acessar:hover { background-color: #e6a600; color: var(--azul-escuro); }
+
+  footer { margin-top: 60px; border-top: 2px solid var(--borda); padding-top: 24px; font-size: 15px; color: #718096; text-align: center; font-weight: 600; }
+  
+  @media (max-width: 600px) { 
+    header.capa h1 { font-size: 28px; } 
+    .btn-acessar { width: 100%; } 
+  }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+<header class="capa">
+  <p class="escola">Escola Bíblica</p>
+  <h1>A Profundidade da Palavra de Deus</h1>
+  <p class="sub">Acervo de Estudos · Classe de Adultos e Maturidade</p>
+</header>
+
+<div class="intro">
+  <p>Graça e paz! Bem-vindo à nossa biblioteca digital. Escolha o material abaixo para iniciar sua leitura e aprofundamento na Palavra.</p>
+</div>
+
+<!-- LISTA DE ESTUDOS -->
+<div class="grid-estudos">
+
+  <!-- INÍCIO DO CARTÃO DO ESTUDO 07 -->
+  <div class="cartao-estudo">
+    <span class="tag">ESTÁGIO 07</span>
+    <h2>A Fome e a Sede (Desespero por Deus)</h2>
+    <p class="tema">Redescavando os Poços de Isaque · Gênesis 26:15-18</p>
+    <a href="https://oficialclaudineilopes.github.io/ieqcampoalegre/estudos/afomeeasedeisaque" class="btn-acessar" target="_blank">📖 Acessar Estudo</a>
+  </div>
+  <!-- FIM DO CARTÃO DO ESTUDO 07 -->
+
+  <!-- ESPAÇO PARA OS PRÓXIMOS ESTUDOS (Exemplo comentado) -->
+  <!-- 
+  <div class="cartao-estudo">
+    <span class="tag">ESTÁGIO 08</span>
+    <h2>Título do Próximo Estudo</h2>
+    <p class="tema">Subtítulo ou Tema Central · Referência Bíblica</p>
+    <a href="LINK_AQUI" class="btn-acessar" target="_blank">📖 Acessar Estudo</a>
+  </div>
+  -->
+
+</div>
+
+<footer>
+  IEQ Campo Alegre · Condutor: Claudinei Lopes <br>
+  Expedição Raízes do Avivamento
+</footer>
+
+</div>
+</body>
+</html>
