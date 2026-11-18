@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dons e Frutos do Espírito Santo — A Profundidade da Palavra de Deus</title>
+<meta name="description" content="Estudo completo sobre os dons e os frutos do Espírito: contexto histórico, definição prática, exemplos bíblicos e aplicação.">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== PALETA (altere aqui para combinar com os estudos anteriores) ===== */
+:root{
+  --azul:#1F2A44;        /* banners principais */
+  --azul-claro:#2F4170;
+  --dourado:#C9A227;     /* destaques, filetes */
+  --dourado-claro:#F6EBC4;
+  --vinho:#7A1F2B;       /* versículos / ênfases */
+  --verde:#2E6B4F;       /* frutos do Espírito */
+  --verde-claro:#E4F1EA;
+  --creme:#FAF6EC;       /* fundo da página */
+  --texto:#2B2B2B;
+  --cinza:#6B6B6B;
+  --borda:#E2D9BE;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--creme);color:var(--texto);font-family:'Merriweather',Georgia,serif;font-size:18px;line-height:1.8}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+h1,h2,h3,h4,.sans{font-family:'Montserrat',Arial,sans-serif}
+
+/* Capa */
+.capa{background:linear-gradient(135deg,var(--azul) 0%,var(--azul-claro) 100%);color:#fff;text-align:center;padding:56px 20px 48px;border-bottom:6px solid var(--dourado)}
+.capa .escola{font-family:'Montserrat';letter-spacing:3px;font-size:13px;text-transform:uppercase;color:var(--dourado)}
+.capa h1{font-size:clamp(28px,5vw,46px);margin:14px 0 6px;line-height:1.2}
+.capa .sub{font-style:italic;color:#E9E3CF;max-width:720px;margin:0 auto}
+.capa .autor{margin-top:22px;font-family:'Montserrat';font-size:14px;color:var(--dourado-claro)}
+.capa .ref{display:inline-block;margin-top:20px;padding:8px 18px;border:1px solid var(--dourado);border-radius:30px;font-size:14px;font-family:'Montserrat'}
+
+/* Índice */
+.indice{background:#fff;border:1px solid var(--borda);border-left:6px solid var(--dourado);border-radius:8px;padding:20px 26px;margin:32px 0}
+.indice h2{margin:0 0 10px;font-size:20px;color:var(--azul)}
+.indice ol{margin:0;padding-left:22px;columns:2;column-gap:36px;font-size:16px}
+.indice a{color:var(--azul-claro);text-decoration:none}
+.indice a:hover{color:var(--vinho);text-decoration:underline}
+@media(max-width:640px){.indice ol{columns:1}}
+
+/* Seções */
+.banner{background:var(--azul);color:#fff;padding:16px 24px;border-radius:8px;margin:56px 0 24px;border-left:8px solid var(--dourado)}
+.banner h2{margin:0;font-size:clamp(20px,3.4vw,28px)}
+.banner small{display:block;color:var(--dourado-claro);font-family:'Montserrat';font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.banner.fruto{background:var(--verde);border-left-color:var(--dourado)}
+h3{color:var(--azul);font-size:22px;margin:34px 0 8px;border-bottom:2px solid var(--dourado);padding-bottom:4px}
+h4{color:var(--vinho);font-size:16px;margin:20px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+p{margin:0 0 16px}
+
+/* Blocos */
+.versiculo{background:var(--dourado-claro);border-left:6px solid var(--vinho);padding:14px 20px;margin:20px 0;border-radius:0 8px 8px 0;font-style:italic}
+.versiculo cite{display:block;font-style:normal;font-family:'Montserrat';font-weight:700;color:var(--vinho);font-size:14px;margin-top:6px}
+.aplicacao,.reflexao,.pergunta,.cuidado,.contexto{border-radius:8px;padding:14px 20px;margin:20px 0;font-size:17px}
+.aplicacao{background:#E8EEF9;border-left:6px solid var(--azul-claro)}
+.reflexao{background:#F3E8EA;border-left:6px solid var(--vinho)}
+.pergunta{background:#fff;border:2px dashed var(--dourado)}
+.cuidado{background:#FFF1E0;border-left:6px solid #D2781E}
+.contexto{background:#fff;border:1px solid var(--borda);border-left:6px solid var(--dourado)}
+.rotulo{display:block;font-family:'Montserrat';font-weight:800;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.aplicacao .rotulo{color:var(--azul-claro)}
+.reflexao .rotulo{color:var(--vinho)}
+.pergunta .rotulo{color:#8A6D0B}
+.cuidado .rotulo{color:#A55A10}
+.contexto .rotulo{color:#8A6D0B}
+
+/* Cartões de dons e frutos */
+.card{background:#fff;border:1px solid var(--borda);border-top:6px solid var(--azul);border-radius:10px;padding:22px 26px;margin:28px 0;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card.fruto{border-top-color:var(--verde)}
+.card header{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.num{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--azul);color:var(--dourado);font-family:'Montserrat';font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+.card.fruto .num{background:var(--verde);color:#fff}
+.card h3{margin:0;border:0;padding:0;font-size:22px}
+.card .grego{font-family:'Montserrat';font-size:13px;color:var(--cinza);margin-top:2px}
+.card .tag{display:inline-block;font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--dourado-claro);color:#6b5400;border-radius:20px;padding:3px 12px;margin-bottom:10px}
+.card.fruto .tag{background:var(--verde-claro);color:var(--verde)}
+.exemplo{background:var(--verde-claro);border-left:5px solid var(--verde);padding:10px 16px;border-radius:0 8px 8px 0;margin:12px 0}
+
+/* Tabelas */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:16px;background:#fff}
+th{background:var(--azul);color:#fff;font-family:'Montserrat';font-size:13px;letter-spacing:.5px;padding:10px;text-align:left}
+td{border:1px solid var(--borda);padding:10px;vertical-align:top}
+tr:nth-child(even) td{background:#FBF8EF}
+.tabela-scroll{overflow-x:auto}
+
+.grupo{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:20px 0}
+.grupo div{background:#fff;border:1px solid var(--borda);border-top:5px solid var(--dourado);border-radius:8px;padding:14px 18px;font-size:16px}
+.grupo strong{font-family:'Montserrat';color:var(--azul)}
+
+footer{background:var(--azul);color:#E9E3CF;text-align:center;padding:36px 20px;margin-top:70px;border-top:6px solid var(--dourado);font-size:15px}
+footer strong{color:var(--dourado)}
+.btn{display:inline-block;margin-top:14px;background:var(--dourado);color:var(--azul);font-family:'Montserrat';font-weight:700;border:0;border-radius:30px;padding:10px 24px;cursor:pointer;font-size:14px}
+.btn:hover{background:#E0B93A}
+.biblio li{margin-bottom:10px;font-size:16px}
+
+@media print{
+  body{font-size:12pt;background:#fff}
+  .banner,.card,.versiculo,.aplicacao,.reflexao,.pergunta,.cuidado,.contexto,.exemplo{page-break-inside:avoid}
+  .btn{display:none}
+  @page{size:A4;margin:15mm}
+}
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <div class="escola">Escola Bíblica · A Profundidade da Palavra de Deus</div>
+  <h1>Dons e Frutos do Espírito Santo</h1>
+  <p class="sub">O que o Espírito dá para servir e o que o Espírito produz para ser: um estudo prático, bíblico e histórico sobre poder e caráter na vida cristã.</p>
+  <div class="ref">1 Coríntios 12–14 · Gálatas 5.16-26 · Romanos 12 · Efésios 4</div>
+  <div class="autor">Condutor de Estudos: Claudinei Lopes</div>
+</div>
+
+<div class="wrap">
+
+<nav class="indice">
+  <h2>Roteiro do Estudo</h2>
+  <ol>
+    <li><a href="#intro">Introdução: duas marcas do mesmo Espírito</a></li>
+    <li><a href="#contexto">O contexto histórico-bíblico</a></li>
+    <li><a href="#dons-visao">Os dons: visão geral e vocabulário</a></li>
+    <li><a href="#dons-nove">Os nove dons de 1 Coríntios 12</a></li>
+    <li><a href="#dons-outros">Outras listas de dons e ministérios</a></li>
+    <li><a href="#dons-ordem">Como exercer os dons com ordem e amor</a></li>
+    <li><a href="#frutos">O fruto do Espírito (Gálatas 5)</a></li>
+    <li><a href="#carne">Fruto versus obras da carne</a></li>
+    <li><a href="#juntos">Dons e fruto: o equilíbrio</a></li>
+    <li><a href="#pratica">Atividades e perguntas para a classe</a></li>
+    <li><a href="#biblio">Para aprofundar (plano de fundo)</a></li>
+  </ol>
+</nav>
+
+<!-- ===================== INTRODUÇÃO ===================== -->
+<section id="intro">
+<div class="banner"><small>Introdução</small><h2>Duas marcas do mesmo Espírito</h2></div>
+
+<p>Quando o Espírito Santo chega a uma vida, ele deixa duas marcas que a Bíblia trata de forma distinta e complementar. A primeira são os <strong>dons</strong> (em grego, <em>charismata</em>): capacitações sobrenaturais dadas para servir ao corpo de Cristo e alcançar o mundo. A segunda é o <strong>fruto</strong> (<em>karpós</em>): o caráter de Jesus sendo formado, aos poucos, naquele que anda no Espírito.</p>
+
+<p>A igreja de Corinto tinha dons em abundância e pouco fruto. Paulo diz que ela não tinha falta de nenhum dom (1 Co 1.7), e, no entanto, precisou ser repreendida por divisões, vaidade, processos entre irmãos e desordem nos cultos. Já as igrejas da Galácia haviam começado no Espírito e corriam o risco de terminar na carne, consumindo-se em disputas (Gl 5.15). Os dois problemas têm a mesma raiz: separar o poder do caráter.</p>
+
+<div class="versiculo">
+  Mas a manifestação do Espírito é dada a cada um para o que for útil.
+  <cite>1 Coríntios 12.7 (ARC)</cite>
+</div>
+
+<div class="versiculo">
+  Mas o fruto do Espírito é: amor, gozo, paz, longanimidade, benignidade, bondade, fé, mansidão, temperança. Contra estas coisas não há lei.
+  <cite>Gálatas 5.22-23 (ARC)</cite>
+</div>
+
+<p>Observe a diferença já nos dois textos. O dom é <em>"dado a cada um"</em>, de maneira distribuída e variada, e serve ao que é "útil", isto é, à edificação dos outros. O fruto é <em>um só</em> (Paulo escreve no singular), nove aspectos de um único caráter, e deve estar presente em todo cristão. Ninguém pode dizer "eu tenho o dom da mansidão, mas não o da paciência"; fruto não é questão de vocação, é questão de discipulado.</p>
+
+<div class="reflexao"><span class="rotulo">Para refletir</span>
+Qual a diferença entre ser usado por Deus e ser parecido com Deus? Você conhece alguém (ou já foi essa pessoa) que serve bem, mas fere quem está perto? O que isso revela sobre dom sem fruto?</div>
+
+<h3>Quadro comparativo inicial</h3>
+<div class="tabela-scroll">
+<table>
+<tr><th>Aspecto</th><th>Dons do Espírito</th><th>Fruto do Espírito</th></tr>
+<tr><td><strong>Palavra grega</strong></td><td><em>charisma / charismata</em> (de <em>charis</em>, "graça"): presente da graça</td><td><em>karpós</em>: produto natural de uma vida que permanece ligada à fonte</td></tr>
+<tr><td><strong>Número</strong></td><td>Plural, variados, distribuídos "como quer" o Espírito (1 Co 12.11)</td><td>Singular, um só fruto com nove manifestações (Gl 5.22)</td></tr>
+<tr><td><strong>Finalidade</strong></td><td>Servir, edificar e fortalecer a igreja (1 Co 14.12; 1 Pe 4.10)</td><td>Formar o caráter de Cristo e glorificar o Pai (Jo 15.8; Rm 8.29)</td></tr>
+<tr><td><strong>Quem recebe</strong></td><td>Cada crente recebe ao menos um; ninguém recebe todos (1 Co 12.11,29-30)</td><td>Todo crente deve manifestá-lo por inteiro</td></tr>
+<tr><td><strong>Como vem</strong></td><td>Concedido pelo Espírito; buscado com zelo e exercitado (1 Co 12.31; 14.1; 2 Tm 1.6)</td><td>Cultivado: permanecer em Cristo, andar no Espírito, crucificar a carne (Jo 15; Gl 5.16,24)</td></tr>
+<tr><td><strong>Tempo</strong></td><td>Pode ser recebido de imediato, mas amadurece com prática</td><td>Cresce com o tempo; é processo</td></tr>
+<tr><td><strong>Sinal de autenticidade</strong></td><td>Exalta Jesus como Senhor (1 Co 12.3) e edifica</td><td>Aparece nas atitudes diárias, em casa, no trabalho, na igreja (Mt 7.16-20)</td></tr>
+</table>
+</div>
+</section>
+
+<!-- ===================== CONTEXTO ===================== -->
+<section id="contexto">
+<div class="banner"><small>Fundamentos</small><h2>O contexto histórico-bíblico</h2></div>
+
+<h3>1. O Espírito no Antigo Testamento: capacitação para tarefas</h3>
+<p>Antes de Pentecostes, o Espírito de Deus já capacitava pessoas, mas de modo geralmente <strong>temporário e vinculado a uma missão</strong>. Bezalel foi "cheio do Espírito de Deus" em sabedoria, entendimento e ciência para construir o tabernáculo (Êx 31.1-5). Os setenta anciãos receberam parte do Espírito que estava sobre Moisés para o ajudarem a governar (Nm 11.16-17,25). Juízes como Otniel, Gideão e Sansão foram revestidos de poder para libertar Israel (Jz 3.10; 6.34; 14.6). Saul e Davi foram ungidos para reinar (1 Sm 10.6; 16.13). Os profetas falavam movidos pelo Espírito (2 Pe 1.21).</p>
+<p>Esse quadro ajuda a entender os dons: eles têm raízes na ideia de que Deus equipa seu povo para cumprir a missão que lhe confia. Mas o Antigo Testamento também aguardava algo maior.</p>
+
+<div class="versiculo">
+  E há de ser que, depois, derramarei o meu Espírito sobre toda a carne; vossos filhos e vossas filhas profetizarão, vossos velhos terão sonhos, vossos jovens terão visões.
+  <cite>Joel 2.28 (ARC)</cite>
+</div>
+
+<p>A promessa de Joel é universal: filhos e filhas, velhos e jovens, e até servos e servas (Jl 2.29). O profeta Ezequiel acrescenta a dimensão do caráter: Deus daria um coração novo e poria o seu Espírito dentro do povo para que andasse nos seus estatutos (Ez 36.26-27). Em resumo, o Antigo Testamento promete <strong>poder para todos</strong> (Joel) e <strong>transformação interior</strong> (Ezequiel), e são exatamente as duas marcas que estudamos.</p>
+
+<h3>2. Jesus e a promessa do Consolador</h3>
+<p>Jesus foi ungido pelo Espírito para o seu ministério (Lc 4.18; At 10.38) e prometeu que enviaria o Consolador (<em>Paráklētos</em>, o que é chamado para estar ao lado) para estar com os discípulos e <em>neles</em> (Jo 14.16-17). Antes de subir, ordenou que esperassem a "promessa do Pai", pois receberiam <strong>poder</strong> para serem suas testemunhas (At 1.4-8). Em Jo 15, ensinou que o fruto vem de permanecer na videira. Poder para testemunhar e fruto para permanecer: os dois temas já estão nos lábios de Jesus.</p>
+
+<h3>3. Pentecostes: a promessa cumprida</h3>
+<p>Em Atos 2, cerca de cinquenta dias depois da Páscoa, durante a festa judaica das Semanas (<em>Shavuot</em>), o Espírito foi derramado sobre os discípulos reunidos em Jerusalém. Pedro explicou o evento citando Joel (At 2.16-21). A partir dali, os dons passam a aparecer na vida da igreja primitiva: línguas, profecia, curas, sinais e maravilhas, sabedoria prática para resolver conflitos (At 6.3,10), discernimento (At 5.3; 13.9-10) e fé extraordinária (At 3.6-8; 14.9-10). A igreja de Antioquia, ao orar e jejuar, ouviu a direção do Espírito e enviou missionários (At 13.1-3).</p>
+
+<div class="contexto"><span class="rotulo">Contexto histórico</span>
+Para a tradição pentecostal, da qual a Igreja do Evangelho Quadrangular faz parte, Pentecostes não é apenas um evento do passado, mas uma experiência disponível ao povo de Deus (At 2.39). O movimento pentecostal moderno floresceu a partir do início do século XX (com marcos como o avivamento da Rua Azusa, em Los Angeles, em 1906) e a Igreja do Evangelho Quadrangular foi fundada por Aimee Semple McPherson em 1923, com a doutrina de Cristo como Salvador, Batizador no Espírito Santo, Médico Divino e Rei Vindouro. Isso explica por que o tema dos dons é tão caro à nossa identidade: acreditamos que o mesmo Espírito de Atos segue agindo.
+</div>
+
+<h3>4. Corinto: a igreja dos dons e das desordens</h3>
+<p>Corinto, capital da província romana da Acaia, era uma cidade portuária rica, cosmopolita e moralmente solta. Seu nome chegou a gerar o verbo "corintiar", sinônimo de viver de forma dissoluta. O comércio, os cultos a Afrodite e a vários deuses, os banquetes em templos e o gosto pela oratória e pela filosofia moldavam a mentalidade de seus habitantes.</p>
+<p>Paulo fundou a igreja por volta de 50-51 d.C. (At 18.1-18) e escreveu a primeira carta aos coríntios de Éfeso, por volta de 55 d.C. Os problemas eram muitos: divisões em torno de líderes (1 Co 1.10-13), tolerância ao pecado sexual (cap. 5), processos judiciais entre irmãos (cap. 6), abusos na Ceia (cap. 11) e confusão nos cultos. É nesse cenário que Paulo escreve os capítulos 12 a 14.</p>
+<p>Um detalhe valioso: antes de converter-se, muitos coríntios haviam sido "levados, como éreis guiados, aos ídolos mudos" (1 Co 12.2). Nos cultos pagãos da região havia êxtase religioso, frenesi e manifestações descontroladas atribuídas aos deuses. Alguns crentes talvez estivessem trazendo esse modelo para o culto cristão, avaliando a espiritualidade pela intensidade e pelo espetáculo. Por isso Paulo começa estabelecendo o critério básico: o Espírito de Deus sempre exalta Jesus como Senhor (1 Co 12.3). E, em seguida, deixa claro que ele é um Deus de ordem, não de confusão (1 Co 14.33,40).</p>
+
+<h3>5. Galácia: a igreja que trocou o Espírito pela lei</h3>
+<p>A carta aos Gálatas foi escrita para as igrejas fundadas por Paulo na região central da atual Turquia. Depois que Paulo partiu, chegaram os chamados <em>judaizantes</em>, que ensinavam que os gentios precisavam da circuncisão e das obras da lei para serem plenamente aceitos. Paulo responde mostrando que o Espírito foi recebido pela fé, e não pelas obras da lei (Gl 3.2-5), e que a vida cristã é <strong>caminhar no Espírito</strong> (Gl 5.16,25).</p>
+<p>Um problema surge, porém: se a lei não governa, o que impede a liberdade de virar desordem? Paulo responde em Gálatas 5. Quem anda no Espírito não satisfaz os desejos da carne, e o Espírito produz o fruto que a lei exige, mas não consegue produzir. Contra um caráter assim "não há lei" (Gl 5.23), pois ninguém precisa proibir o amor, a alegria ou a mansidão.</p>
+
+<div class="contexto"><span class="rotulo">Curiosidade</span>
+Em Gálatas 5, Paulo contrasta <strong>"as obras da carne"</strong> (plural, v. 19) com <strong>"o fruto do Espírito"</strong> (singular, v. 22). Obras são esforços humanos desconexos que se multiplicam; fruto é o resultado vivo de uma vida ligada à fonte. Boa parte dos comentaristas vê aí uma deliberada escolha de palavras: o caráter cristão não se fabrica, se cultiva.
+</div>
+</section>
+<!-- ===================== DONS: VISÃO GERAL ===================== -->
+<section id="dons-visao">
+<div class="banner"><small>Parte 1</small><h2>Os dons do Espírito: visão geral e vocabulário</h2></div>
+
+<h3>O que a Bíblia chama de "dom"?</h3>
+<p>O Novo Testamento usa três palavras principais nas passagens sobre o tema, e cada uma ilumina um aspecto:</p>
+<div class="grupo">
+  <div><strong>Charismata</strong> (1 Co 12.4)<br>"Dons de graça". Ênfase em que são presentes imerecidos. Ninguém os conquista por mérito ou maturidade.</div>
+  <div><strong>Diakoniai</strong> (1 Co 12.5)<br>"Ministérios, serviços". Ênfase em que o dom existe para servir. Quem recebe é servo, não dono.</div>
+  <div><strong>Energēmata</strong> (1 Co 12.6)<br>"Operações, atividades". Ênfase em que é Deus quem opera por meio da pessoa; o poder não é dela.</div>
+</div>
+<p>Repare na estrutura trinitária de 1 Co 12.4-6: o mesmo <strong>Espírito</strong> distribui os dons, o mesmo <strong>Senhor</strong> (Jesus) define os serviços, o mesmo <strong>Deus</strong> (Pai) opera tudo em todos. Os dons não são propriedade particular, são expressão da vida de toda a Trindade na igreja.</p>
+
+<h3>Três princípios básicos antes de estudar cada dom</h3>
+<div class="aplicacao"><span class="rotulo">Princípio 1: Unidade na diversidade</span>
+Paulo compara a igreja a um corpo: muitos membros, uma só vida (1 Co 12.12-27). O pé não pode dizer que não é do corpo por não ser mão, nem o olho pode dizer à mão que não precisa dela. Ninguém é dispensável e ninguém é autossuficiente.</div>
+<div class="aplicacao"><span class="rotulo">Princípio 2: Soberania do Espírito</span>
+Os dons são repartidos "como quer" o Espírito (1 Co 12.11), e não conforme o gosto, a posição ou a espiritualidade aparente de alguém. Isso nos livra tanto da inveja quanto do orgulho.</div>
+<div class="aplicacao"><span class="rotulo">Princípio 3: Finalidade edificante</span>
+O critério para valorizar um dom é quanto ele edifica (1 Co 14.12,26). Dom que só exibe quem o usa não cumpre sua finalidade.</div>
+
+<div class="versiculo">
+  Cada um administre aos outros o dom como o recebeu, como bons despenseiros da multiforme graça de Deus.
+  <cite>1 Pedro 4.10 (ARC)</cite>
+</div>
+</section>
+
+<!-- ===================== OS NOVE DONS ===================== -->
+<section id="dons-nove">
+<div class="banner"><small>Parte 1.1</small><h2>Os nove dons de 1 Coríntios 12.7-11</h2></div>
+
+<div class="versiculo">
+  Porque a um, pelo Espírito, é dada a palavra de sabedoria; e a outro, pelo mesmo Espírito, a palavra de ciência; e a outro, pelo mesmo Espírito, a fé; e a outro, pelo mesmo Espírito, os dons de curar; e a outro, a operação de maravilhas; e a outro, a profecia; e a outro, o dom de discernir os espíritos; e a outro, a variedade de línguas; e a outro, a interpretação das línguas. Mas um só e o mesmo Espírito opera todas estas coisas, repartindo particularmente a cada um como quer.
+  <cite>1 Coríntios 12.8-11 (ARC)</cite>
+</div>
+
+<p>A tradição teológica costuma agrupar esses nove dons em três categorias, o que facilita a memorização. Não é uma divisão feita por Paulo, mas é pedagogicamente útil:</p>
+<div class="grupo">
+  <div><strong>Dons de revelação</strong> (revelam algo)<br>Palavra de sabedoria · Palavra de ciência · Discernimento de espíritos</div>
+  <div><strong>Dons de poder</strong> (realizam algo)<br>Fé · Dons de curar · Operação de maravilhas</div>
+  <div><strong>Dons de inspiração</strong> (dizem algo)<br>Profecia · Variedade de línguas · Interpretação de línguas</div>
+</div>
+
+<!-- 1 -->
+<article class="card">
+  <header><div class="num">1</div><div><h3>Palavra de sabedoria</h3><div class="grego">grego: <em>lógos sophías</em></div></div></header>
+  <span class="tag">Dom de revelação</span>
+  <h4>O que é</h4>
+  <p>É uma capacitação sobrenatural do Espírito para saber o que fazer, ou o que dizer, numa situação específica, com a sabedoria que vem de Deus. Não é erudição, experiência acumulada ou esperteza humana (1 Co 2.6-13). É um lampejo, uma direção pontual dada por Deus para aplicar a verdade ao caso concreto. O termo "palavra" sugere uma porção, uma fala oportuna, e não uma sabedoria geral.</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Salomão julgando o caso das duas mulheres e da criança (1 Rs 3.16-28). Jesus ao responder a pergunta armadilha sobre o imposto a César ("dai a César o que é de César", Mt 22.15-22). Tiago, no Concílio de Jerusalém, apontando uma solução que reuniu judeus e gentios (At 15.13-21). A promessa de Jesus de que, diante de autoridades, o Espírito daria palavras que os adversários não poderiam contradizer (Lc 21.15).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Um líder que, em reunião tensa, diz exatamente a frase que desfaz o impasse. Um pai ou uma mãe que, na hora de uma crise familiar, sabe o que dizer e o que calar. Um conselheiro pastoral que, depois de ouvir, recebe a direção para aquela pessoa, e não um conselho genérico. Alguém que, diante de uma decisão difícil, recebe uma clareza que não tinha antes.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Sabedoria genuína é consistente com a Escritura e produz paz, pureza e misericórdia (Tg 3.17). Quem diz "Deus me deu uma palavra" e usa isso para impor a própria vontade a outros está fora do propósito do dom.</div>
+</article>
+
+<!-- 2 -->
+<article class="card">
+  <header><div class="num">2</div><div><h3>Palavra de ciência (conhecimento)</h3><div class="grego">grego: <em>lógos gnṓseōs</em></div></div></header>
+  <span class="tag">Dom de revelação</span>
+  <h4>O que é</h4>
+  <p>É o conhecimento sobrenatural de algo que a pessoa não poderia saber por meios naturais: um fato, uma situação, uma necessidade, um perigo. Enquanto a palavra de sabedoria diz <em>o que fazer</em>, a palavra de ciência revela <em>o que é</em>. Muitos estudiosos distinguem este dom do conhecimento bíblico obtido pelo estudo, ainda que o estudo sério da Palavra seja sempre indispensável (2 Tm 2.15).</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Jesus ao revelar à mulher samaritana o histórico de seus relacionamentos (Jo 4.17-19) e a Natanael ao dizer que o vira debaixo da figueira (Jo 1.47-49). Eliseu, ao saber o que o rei da Síria falava em seu quarto de dormir (2 Rs 6.12), e ao saber da desonestidade de Geazi mesmo à distância (2 Rs 5.26). Pedro ao conhecer a mentira de Ananias e Safira (At 5.1-4). Ananias de Damasco recebendo a localização exata de Saulo (At 9.10-12).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Um pregador que, durante o culto, é impelido a mencionar uma situação específica que alguém na congregação vive, e essa pessoa se reconhece e abre o coração. Alguém que sente a necessidade de orar por um parente ou amigo e depois descobre que foi no exato momento de uma crise. Um intercessor que recebe a impressão de por quem ou pelo que orar.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  O dom serve para ajudar e restaurar, nunca para expor, constranger ou controlar pessoas. Toda "revelação" precisa ser entregue com humildade, amor e sob o juízo da liderança (1 Co 14.29).</div>
+</article>
+
+<!-- 3 -->
+<article class="card">
+  <header><div class="num">3</div><div><h3>Fé</h3><div class="grego">grego: <em>pístis</em></div></div></header>
+  <span class="tag">Dom de poder</span>
+  <h4>O que é</h4>
+  <p>Aqui não se trata da fé salvadora, que todo cristão tem (Ef 2.8), nem do fruto da fidelidade (Gl 5.22). É uma fé especial, concedida pelo Espírito para crer em Deus de forma extraordinária em uma circunstância específica, com uma certeza que ultrapassa o razoável e que abre caminho para o sobrenatural. É a fé que remove montanhas, mencionada por Paulo em 1 Co 13.2 e por Jesus em Mt 17.20.</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Elias enfrentando os profetas de Baal no Monte Carmelo e depois orando sete vezes por chuva (1 Rs 18). Daniel na cova dos leões (Dn 6.16-23). Os três jovens na fornalha ardente, dizendo que Deus podia livrá-los, "e se não", ainda assim não adorariam (Dn 3.17-18). Pedro, ao dizer ao coxo da porta Formosa "levanta-te e anda" (At 3.1-8). George Müller, no século XIX, sustentando órfãos em Bristol apenas por oração, é um exemplo histórico frequentemente citado.</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Um missionário que parte sem sustento garantido, mas com uma certeza interior vinda de Deus. Uma igreja que inicia um projeto humanamente impossível confiando na promessa recebida. Uma pessoa que ora por uma situação "sem solução" com uma convicção que não vem do otimismo natural, e que se mostra firme mesmo diante do silêncio aparente de Deus.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Fé espiritual não é presunção nem forma de "obrigar" Deus. É alinhar-se com o que Ele revelou e confiar que Ele cumprirá, mesmo que o resultado não seja o esperado (Hb 11.35-39).</div>
+</article>
+
+<!-- 4 -->
+<article class="card">
+  <header><div class="num">4</div><div><h3>Dons de curar</h3><div class="grego">grego: <em>charísmata iamátōn</em> (literalmente "dons de curas", ambos no plural)</div></div></header>
+  <span class="tag">Dom de poder</span>
+  <h4>O que é</h4>
+  <p>É a capacitação do Espírito para que, pela oração e pela imposição de mãos, pessoas sejam curadas de enfermidades físicas, emocionais ou espirituais. O plural duplo ("dons" e "curas") sugere variedade: há diferentes tipos de cura e diferentes pessoas usadas em cada tipo. A Igreja do Evangelho Quadrangular o associa ao pilar de Cristo como <em>Médico Divino</em>, com base em Êx 15.26 ("eu sou o Senhor, que te sara") e Tg 5.14-16.</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Jesus curando enfermos de toda sorte (Mt 4.23-24). Os discípulos, enviados para curar (Lc 9.1-2; 10.9). Pedro e João com o coxo na porta Formosa (At 3). A sombra de Pedro e os lenços de Paulo (At 5.15; 19.11-12). Paulo orando pelo pai de Públio em Malta (At 28.8). A instrução de Tg 5.14-15 para chamar os presbíteros da igreja para orar pelo enfermo.</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Cultos de oração pelos enfermos; visitas a hospitais e lares com oração e unção; testemunhos de pessoas aliviadas de dores, curadas de doenças ou libertas de angústias emocionais. A cura pode ser instantânea ou progressiva. Nenhuma forma exclui o cuidado médico, que também é meio de que Deus se serve (Cl 4.14 menciona Lucas, "o médico amado").</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Nenhum crente tem "poder de curar" em si. É sempre o Espírito quem cura. Nem toda oração por cura é respondida como esperado, e isso não prova falta de fé de quem pediu (2 Co 12.7-9; 1 Tm 5.23). Nunca se deve induzir alguém a abandonar tratamento médico.</div>
+</article>
+
+<!-- 5 -->
+<article class="card">
+  <header><div class="num">5</div><div><h3>Operação de maravilhas (milagres)</h3><div class="grego">grego: <em>energḗmata dynámeōn</em> (operações de "poderes")</div></div></header>
+  <span class="tag">Dom de poder</span>
+  <h4>O que é</h4>
+  <p>É o agir sobrenatural de Deus que suspende, altera ou transcende as leis naturais por meio de um servo seu. Inclui livramentos, intervenções sobre a natureza, libertações de poderes malignos e outros atos poderosos que testemunham a presença de Deus. Difere da cura por abranger toda espécie de milagre, não apenas os relacionados ao corpo. A palavra <em>dýnamis</em> ("poder") dá origem a "dinamite" e a "dinâmico".</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Moisés e as pragas (Êx 7–12) e a abertura do Mar Vermelho (Êx 14). Eliseu fazendo o machado flutuar (2 Rs 6.1-7) e o óleo da viúva se multiplicar (2 Rs 4.1-7). Jesus acalmando a tempestade (Mc 4.35-41) e multiplicando pães (Jo 6). Paulo, ferido por uma víbora em Malta e sem sofrer dano (At 28.3-6). Filipe sendo levado pelo Espírito de Gaza a Azoto (At 8.39-40). A libertação de Pedro da prisão (At 12.5-11).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Livramentos inexplicáveis em acidentes ou perigos; provisão sobrenatural em momentos de escassez; libertação de pessoas oprimidas por forças espirituais; portas abertas para o evangelho em lugares fechados. Missionários em regiões hostis frequentemente relatam intervenções desse tipo.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Jesus advertiu que haverá falsos cristos e falsos profetas que farão sinais e prodígios (Mt 24.24; 2 Ts 2.9). Sinais não validam doutrina por si mesmos: o teste final é fidelidade a Cristo e à Escritura (Dt 13.1-3).</div>
+</article>
+
+<!-- 6 -->
+<article class="card">
+  <header><div class="num">6</div><div><h3>Profecia</h3><div class="grego">grego: <em>prophēteía</em></div></div></header>
+  <span class="tag">Dom de inspiração</span>
+  <h4>O que é</h4>
+  <p>No Novo Testamento, é falar, sob a inspiração do Espírito, uma mensagem de Deus para uma pessoa ou para a igreja. Paulo explica o seu fim prático: quem profetiza fala aos homens "para edificação, exortação e consolação" (1 Co 14.3). Ela pode também revelar os segredos do coração de um incrédulo, levando-o a reconhecer a presença de Deus (1 Co 14.24-25). Muitos estudiosos distinguem a profecia do Novo Testamento, que deve ser avaliada (1 Co 14.29; 1 Ts 5.20-21), do ofício de profeta do Antigo Testamento e do cânon da Escritura, que está completo e é o padrão de toda profecia.</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Ágabo anunciando a grande fome (At 11.27-28) e, mais tarde, prevendo as prisões de Paulo (At 21.10-11). As quatro filhas de Filipe que profetizavam (At 21.9). A profecia sobre Timóteo, com imposição de mãos (1 Tm 1.18; 4.14). A igreja de Antioquia, em que profetas e doutores ouviram o Espírito (At 13.1-2).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Uma palavra dada durante o culto que consola, encoraja ou chama a igreja ao arrependimento. Uma mensagem pessoal que confirma algo que a pessoa já vinha buscando em oração. Pregação ungida que fala exatamente ao momento da congregação. Quem profetiza deve fazê-lo com humildade, entregando a palavra para ser avaliada pelos líderes, e jamais para dar ordens ou controlar a vida de ninguém.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  O teste de uma profecia inclui: Exalta Jesus como Senhor? (1 Co 12.3; 1 Jo 4.1-3) Concorda com a Escritura? (At 17.11) Edifica, exorta e consola? (1 Co 14.3) Produz bom fruto no caráter de quem a entrega? (Mt 7.15-20) Nem todo "Deus me disse" é de Deus.</div>
+</article>
+
+<!-- 7 -->
+<article class="card">
+  <header><div class="num">7</div><div><h3>Discernimento de espíritos</h3><div class="grego">grego: <em>diakríseis pneumátōn</em></div></div></header>
+  <span class="tag">Dom de revelação</span>
+  <h4>O que é</h4>
+  <p>É a capacidade sobrenatural de distinguir a origem de uma manifestação espiritual: se vem do Espírito Santo, do espírito humano ou de um espírito maligno. O verbo <em>diakrínō</em> significa "separar, distinguir, julgar". Não é um dom de "adivinhar o mal" nos outros nem de desconfiar de todos, mas de reconhecer a fonte do que se manifesta, protegendo a igreja do engano. É complemento indispensável da profecia: sem ele, a igreja não saberia peneirar o que foi dito (1 Co 14.29).</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Paulo reconhecendo a origem do espírito da pitonisa em Filipos, mesmo quando ela dizia a verdade sobre eles (At 16.16-18). Paulo identificando o caráter de Elimas, o mágico em Chipre (At 13.8-11). Pedro percebendo que Satanás enchera o coração de Ananias (At 5.3). Jesus distinguindo, em Pedro, a voz do Pai (Mt 16.17) e a voz de Satanás (Mt 16.23).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Em reuniões de oração e libertação, saber se o que ocorre é obra de Deus ou do inimigo. Em aconselhamento, perceber que um problema vai além do emocional. Ao ouvir uma pregação ou profecia, sentir um "não" interior no espírito e depois confirmar à luz da Escritura. Proteger a igreja de falsos mestres.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Quem tem esse dom jamais deve se tornar acusador de irmãos nem "caçador de demônios". A base de todo discernimento continua sendo a Palavra (1 Jo 4.1; Hb 5.14).</div>
+</article>
+
+<!-- 8 -->
+<article class="card">
+  <header><div class="num">8</div><div><h3>Variedade de línguas</h3><div class="grego">grego: <em>génē glōssôn</em></div></div></header>
+  <span class="tag">Dom de inspiração</span>
+  <h4>O que é</h4>
+  <p>É a capacidade de falar, pelo Espírito, em línguas que a pessoa não aprendeu: ora línguas humanas reais (como em Atos 2), ora uma linguagem de oração e louvor dirigida a Deus (1 Co 14.2,14-15). Paulo diz que quem fala em língua "não fala aos homens, mas a Deus" e "edifica-se a si mesmo" (1 Co 14.2,4). Distinguem-se, no pensamento pentecostal, a <strong>língua como sinal</strong> do batismo no Espírito (At 2.4; 10.46; 19.6), a <strong>língua como oração devocional</strong> pessoal e a <strong>língua como mensagem pública</strong>, que exige interpretação para edificar a igreja.</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Pentecostes: cada um ouvia os apóstolos falarem em sua própria língua (At 2.4-11). Casa de Cornélio, os gentios recebendo o Espírito e falando em línguas (At 10.44-46). Os discípulos de Éfeso (At 19.1-6). Paulo, que agradecia a Deus por falar em línguas mais do que todos os coríntios (1 Co 14.18).</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Na oração particular, como linguagem devocional de adoração e intercessão (Rm 8.26; Jd 20). Em cultos de oração, quando a congregação ora em voz alta. Em manifestação pública, em que alguém fala em língua e outro, ou o próprio, interpreta. Há relatos missionários de pessoas falando línguas reais conhecidas por quem ouvia.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  Paulo regula o uso público: no máximo dois ou três, cada um por sua vez, e só se houver interpretação (1 Co 14.27-28). Nem todos falam em línguas (1 Co 12.30) enquanto dom de ministério na congregação, ainda que a tradição pentecostal ensine que a língua acompanha o batismo no Espírito. Línguas não são medida de maturidade: Corinto as tinha em abundância e era imatura.</div>
+</article>
+
+<!-- 9 -->
+<article class="card">
+  <header><div class="num">9</div><div><h3>Interpretação de línguas</h3><div class="grego">grego: <em>hermēneía glōssôn</em></div></div></header>
+  <span class="tag">Dom de inspiração</span>
+  <h4>O que é</h4>
+  <p>É a capacidade, dada pelo Espírito, de expressar em língua conhecida o sentido do que foi dito em língua desconhecida, para que a igreja seja edificada. Paulo ensina que quem fala em língua deve orar para poder interpretar (1 Co 14.13) e que, sem interpretador, deve calar-se na congregação (1 Co 14.28). Não é tradução palavra por palavra, mas a comunicação do sentido. O termo grego <em>hermēneía</em> deu origem a "hermenêutica".</p>
+  <h4>Exemplos bíblicos</h4>
+  <p>Embora Atos não registre casos de interpretação, a instrução de 1 Co 14.5,13,26-28 mostra que era prática da igreja primitiva. Em Atos 2, o milagre foi de outro tipo: cada ouvinte entendia na sua própria língua, o que evidencia que o Espírito sempre busca tornar a mensagem compreensível.</p>
+  <h4>Na prática hoje</h4>
+  <div class="aplicacao"><span class="rotulo">Como se manifesta</span>
+  Durante o culto, após uma manifestação em línguas, alguém, ou a mesma pessoa, apresenta uma mensagem de exortação, consolo, louvor ou direção na língua local. A congregação responde com "amém" (1 Co 14.16). A mensagem deve estar em harmonia com a Palavra.</div>
+  <div class="cuidado"><span class="rotulo">Cuidado</span>
+  A interpretação não deve ser usada para acrescentar à Escritura nem para dar ordens. Tudo deve ser avaliado (1 Co 14.29).</div>
+</article>
+
+</section>
+
+<!-- ===================== OUTRAS LISTAS ===================== -->
+<section id="dons-outros">
+<div class="banner"><small>Parte 1.2</small><h2>Outras listas de dons e ministérios</h2></div>
+
+<p>As nove manifestações de 1 Coríntios 12 não esgotam o assunto. Paulo apresenta, em outros textos, listas complementares, cada uma com um enfoque. Elas mostram que o Espírito age tanto no sobrenatural espetacular quanto no serviço cotidiano.</p>
+
+<h3>Romanos 12.6-8: dons que moldam a motivação e o serviço</h3>
+<p>Dirigindo-se a uma igreja que ele ainda não visitara, em Roma, capital do império, Paulo escreve sobre como os crentes devem se ver (Rm 12.3) e usa de novo a imagem do corpo (Rm 12.4-5). A lista a seguir tem um tom mais prático e "do dia a dia da igreja".</p>
+<div class="tabela-scroll">
+<table>
+<tr><th>Dom</th><th>Significado</th><th>Como aparece na prática</th></tr>
+<tr><td><strong>Profecia</strong> (<em>prophēteía</em>)</td><td>Falar da parte de Deus, "segundo a medida da fé" (Rm 12.6)</td><td>Quem fala a verdade com clareza, mesmo que desconfortável, e discerne o que Deus está dizendo para o momento da igreja</td></tr>
+<tr><td><strong>Ministério / serviço</strong> (<em>diakonía</em>)</td><td>Ajuda prática e organizada em favor de outros</td><td>Quem monta cadeiras, cuida da recepção, prepara o culto, cozinha, ajuda a mudar a casa de um irmão. Raramente é visto e quase sempre é indispensável</td></tr>
+<tr><td><strong>Ensino</strong> (<em>didaskalía</em>)</td><td>Explicar, esclarecer e aplicar a verdade bíblica com clareza</td><td>Professores de escola dominical, líderes de célula, quem estuda com diligência e traduz o texto em vida. Ensino bíblico profundo é, em si, um dom a ser desenvolvido</td></tr>
+<tr><td><strong>Exortação</strong> (<em>paráklēsis</em>)</td><td>Encorajar, consolar, chamar para perto (mesma raiz de "Consolador")</td><td>Quem levanta os desanimados, dá conselhos que reerguem, estimula quem está à beira de desistir. Barnabé ("filho da exortação", At 4.36) é o modelo</td></tr>
+<tr><td><strong>Contribuição</strong> (<em>metadidoús</em>)</td><td>Repartir bens "com simplicidade", isto é, sem segundas intenções</td><td>Quem contribui generosamente com recursos, de forma sincera e discreta, para a obra e para os necessitados (2 Co 8–9)</td></tr>
+<tr><td><strong>Liderança / presidência</strong> (<em>proïstámenos</em>)</td><td>Presidir, conduzir, "com zelo" ou diligência</td><td>Quem organiza, coordena e dirige pessoas e projetos com dedicação e visão de longo prazo</td></tr>
+<tr><td><strong>Misericórdia</strong> (<em>eleôn</em>)</td><td>Socorrer os que sofrem, "com alegria"</td><td>Visitar enfermos, acompanhar enlutados, cuidar dos que estão feridos, sem constrangimento nem pena condescendente</td></tr>
+</table>
+</div>
+
+<h3>Efésios 4.11-12: dons de liderança "dados à igreja"</h3>
+<p>Aqui o foco não é o dom como habilidade dada a todos, mas pessoas que Cristo dá à igreja para equipá-la. A palavra "dons" é usada no sentido de que o próprio Cristo, depois de subir ao alto, concedeu esses ministérios (Ef 4.8,11).</p>
+<div class="grupo">
+  <div><strong>Apóstolos</strong><br>Enviados com autoridade para fundar e firmar igrejas. No sentido estrito, as testemunhas oculares do Cristo ressurreto; no sentido amplo, missionários fundadores de obras.</div>
+  <div><strong>Profetas</strong><br>Comunicam a mente de Deus para a igreja em dado momento, trazendo direção e edificação.</div>
+  <div><strong>Evangelistas</strong><br>Anunciam as boas-novas aos que ainda não creem e têm paixão por alcançar perdidos (Filipe, At 21.8).</div>
+  <div><strong>Pastores</strong><br>Cuidam, guardam, guiam e alimentam o rebanho, como Cristo, o Supremo Pastor (1 Pe 5.1-4).</div>
+  <div><strong>Mestres (doutores)</strong><br>Ensinam a sã doutrina de modo sistemático e aprofundado.</div>
+</div>
+<div class="aplicacao"><span class="rotulo">Propósito</span>
+Paulo explica que esses ministérios existem "para o aperfeiçoamento dos santos, para a obra do ministério, para a edificação do corpo de Cristo" (Ef 4.12). Isso derruba a ideia de que o pastor faz todo o trabalho e a igreja assiste. O líder equipa; todos servem.</div>
+
+<h3>Outros dons mencionados no Novo Testamento</h3>
+<div class="grupo">
+  <div><strong>Socorros e governos</strong> (1 Co 12.28)<br><em>Antilḗmpseis</em> e <em>kybernḗseis</em>: ajuda e administração. Quem socorre os necessitados e quem "dirige o leme" da igreja, como um piloto de navio.</div>
+  <div><strong>Hospitalidade</strong> (1 Pe 4.9; Rm 12.13)<br>Abrir a casa e a mesa. Era essencial na igreja primitiva, que se reunia em lares e hospedava missionários itinerantes.</div>
+  <div><strong>Celibato</strong> (1 Co 7.7)<br>Paulo chama de <em>cháris</em> (dom) a capacidade de viver solteiro sem dano, para servir ao Senhor sem divisão. Casamento também é dom.</div>
+  <div><strong>Apóstolo "enviado", missionário</strong><br>O chamado transcultural, como o de Barnabé e Paulo em At 13.2-3.</div>
+  <div><strong>Música e louvor</strong><br>Embora não conste das listas de Paulo, o Antigo Testamento mostra levitas capacitados pelo Espírito para o louvor (1 Cr 25.1-7), e o Novo Testamento incentiva cânticos "espirituais" (Ef 5.19; Cl 3.16).</div>
+  <div><strong>Habilidades manuais e artísticas</strong><br>Bezalel e Aoliabe foram cheios do Espírito para construir o tabernáculo (Êx 31.1-6). Toda habilidade consagrada pode ser dom.</div>
+</div>
+
+<div class="contexto"><span class="rotulo">Nota de estudo</span>
+As listas de dons nunca coincidem, e isso é intencional: nenhuma delas pretende ser exaustiva. Muitos comentaristas observam que Paulo ajusta a lista conforme a necessidade de cada igreja. O essencial não é memorizar uma lista fechada, mas reconhecer que o Espírito distribui capacitações variadas e que todas devem servir ao mesmo corpo.
+</div>
+</section>
+
+<!-- ===================== COMO EXERCER ===================== -->
+<section id="dons-ordem">
+<div class="banner"><small>Parte 1.3</small><h2>Como exercer os dons com ordem e amor</h2></div>
+
+<h3>A estrutura de 1 Coríntios 12–14</h3>
+<p>Os três capítulos formam uma unidade, e entender seu desenho ajuda a evitar os erros mais comuns:</p>
+<div class="grupo">
+  <div><strong>Cap. 12: A origem e a diversidade</strong><br>Todos os dons vêm do mesmo Espírito, e todos os membros importam.</div>
+  <div><strong>Cap. 13: A motivação</strong><br>Sem amor, os dons mais espetaculares são "nada". O amor é o "caminho sobremodo excelente" (12.31).</div>
+  <div><strong>Cap. 14: O exercício</strong><br>Ordem, inteligibilidade, edificação e avaliação nos cultos.</div>
+</div>
+
+<h3>Princípios práticos de 1 Coríntios 14</h3>
+<div class="tabela-scroll">
+<table>
+<tr><th>Princípio</th><th>Texto</th><th>Aplicação</th></tr>
+<tr><td><strong>Busque o amor e deseje os dons</strong></td><td>1 Co 14.1</td><td>Amor e dons não competem. Desejar os dons espirituais é ordem bíblica, desde que se persiga o amor primeiro</td></tr>
+<tr><td><strong>Valorize o que edifica</strong></td><td>1 Co 14.3-5,12</td><td>Na reunião, entre dois dons de igual origem, prefira o que mais edifica os presentes</td></tr>
+<tr><td><strong>Seja inteligível</strong></td><td>1 Co 14.9,19</td><td>Palavras que ninguém entende não edificam. Na igreja, "cinco palavras com o entendimento" valem mais que dez mil em língua</td></tr>
+<tr><td><strong>Ore e cante com espírito e entendimento</strong></td><td>1 Co 14.15</td><td>Não é uma coisa ou outra: os dois, juntos</td></tr>
+<tr><td><strong>Cada um contribui</strong></td><td>1 Co 14.26</td><td>O culto não é apresentação de uma só pessoa. Cada um pode trazer salmo, ensino, revelação, língua ou interpretação, tudo "para edificação"</td></tr>
+<tr><td><strong>Limite e ordem</strong></td><td>1 Co 14.27-33</td><td>Dois ou três de cada vez, sucessivamente; os profetas podem controlar a sua própria manifestação. O Espírito não perturba quem está sob o seu governo</td></tr>
+<tr><td><strong>Julgue o que é dito</strong></td><td>1 Co 14.29; 1 Ts 5.19-21</td><td>Não apague o Espírito, mas examine tudo e retenha o que é bom</td></tr>
+<tr><td><strong>Decência e ordem</strong></td><td>1 Co 14.33,40</td><td>"Deus não é Deus de confusão, mas de paz"; "faça-se tudo decentemente e com ordem"</td></tr>
+</table>
+</div>
+
+<h3>Como descobrir e desenvolver os seus dons</h3>
+<div class="aplicacao"><span class="rotulo">Caminho prático em seis passos</span>
+<strong>1. Ore.</strong> Peça ao Espírito (Lc 11.13) e deseje com zelo os melhores dons (1 Co 12.31; 14.1,12).<br>
+<strong>2. Estude.</strong> Conheça o que a Escritura ensina para não ser levado por modismos ou por medo.<br>
+<strong>3. Sirva.</strong> Dons costumam ser descobertos <em>servindo</em>, e não esperando uma revelação espetacular. Experimente áreas diferentes.<br>
+<strong>4. Observe o fruto.</strong> Onde o seu serviço edifica e traz frutos visíveis na vida dos outros?<br>
+<strong>5. Ouça os irmãos.</strong> A confirmação da comunidade e da liderança é parte do processo (At 13.1-3; 1 Tm 4.14).<br>
+<strong>6. Exercite e avive.</strong> Paulo exorta Timóteo a "reavivar o dom de Deus" que há nele (2 Tm 1.6). Dom que não se exercita enfraquece.</div>
+
+<div class="reflexao"><span class="rotulo">Para refletir</span>
+Quais necessidades da sua igreja local você vê com mais sensibilidade? Onde você já sentiu que Deus o usou mesmo sem perceber? O que o impede de dar o primeiro passo no serviço: medo, comparação, falta de oportunidade?</div>
+</section>
+<!-- ===================== FRUTOS ===================== -->
+<section id="frutos">
+<div class="banner fruto"><small>Parte 2</small><h2>O fruto do Espírito (Gálatas 5.22-23)</h2></div>
+
+<h3>Por que "fruto" e no singular?</h3>
+<p>A imagem do fruto vem direto dos ensinos de Jesus. Em João 15, ele se apresenta como a videira verdadeira, o Pai como lavrador e os discípulos como ramos. O ramo não faz esforço para produzir uvas: ele <strong>permanece</strong> ligado à videira e a seiva faz o resto (Jo 15.4-5). Os frutos são o resultado natural de uma vida conectada à fonte.</p>
+<p>O mesmo princípio aparece em Mt 7.16-20 ("pelos seus frutos os conhecereis") e em Salmos 1.3 (a árvore plantada junto a ribeiros de águas, que dá o seu fruto na estação própria). O caráter cristão, portanto, não se fabrica por pura força de vontade, e também não nasce por acaso: ele <em>cresce</em> onde há raiz, água, tempo e poda (Jo 15.2).</p>
+
+<div class="versiculo">
+  Digo, porém: andai em Espírito, e não cumprireis a concupiscência da carne.
+  <cite>Gálatas 5.16 (ARC)</cite>
+</div>
+
+<div class="contexto"><span class="rotulo">Como ler a lista</span>
+Os nove aspectos costumam ser organizados em três grupos de três, uma divisão didática que muitos autores adotam: três que dizem respeito à nossa <strong>relação com Deus</strong> (amor, gozo, paz), três à nossa <strong>relação com os outros</strong> (longanimidade, benignidade, bondade) e três à nossa <strong>relação conosco mesmos</strong> (fé/fidelidade, mansidão, temperança). Não é Paulo quem a faz, mas serve para memorizar e para perceber que o fruto toca todas as dimensões da vida.</div>
+
+<!-- 1 -->
+<article class="card fruto">
+  <header><div class="num">1</div><div><h3>Amor</h3><div class="grego">grego: <em>agápē</em></div></div></header>
+  <span class="tag">Relação com Deus e com o próximo</span>
+  <h4>O que é</h4>
+  <p>É o amor que se dá, que procura o bem do outro mesmo à custa de si mesmo. Não é sentimento passageiro, mas decisão sustentada pelo Espírito. É a raiz dos demais frutos: em 1 Coríntios 13.4-7, Paulo descreve o amor com atitudes (paciente, benigno, não se vangloria, não procura os seus interesses, tudo suporta), e Jesus resumiu a lei em amar a Deus e ao próximo (Mt 22.37-40). O Novo Testamento diz que "Deus é amor" (1 Jo 4.8) e que o amor de Deus "é derramado em nossos corações pelo Espírito Santo" (Rm 5.5).</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Jesus no calvário:</strong> "Ninguém tem maior amor do que este: de dar alguém a sua vida pelos seus amigos" (Jo 15.13). <strong>Rute</strong> abandonando sua terra para ficar com Noemi (Rt 1.16-17). <strong>O bom samaritano</strong>, que parou, cuidou e pagou pelo desconhecido ferido (Lc 10.30-37). <strong>José do Egito</strong>, que perdoou os irmãos que o venderam (Gn 45.4-8).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Visitar quem está sozinho sem esperar retorno. Escutar o cônjuge ou o filho sem olhar para o celular. Ajudar um colega difícil sem expor o erro dele. Perdoar quem pede perdão e também quem não pede. Abrir mão do melhor lugar, da última palavra ou do controle remoto.</div>
+  <h4>Como cultivar</h4>
+  <p>Receba o amor de Deus antes de tentar dá-lo: "nós o amamos a ele porque ele nos amou primeiro" (1 Jo 4.19). Pratique pequenas decisões de amor todos os dias e ore pelos que lhe são difíceis de amar (Mt 5.44).</p>
+</article>
+
+<!-- 2 -->
+<article class="card fruto">
+  <header><div class="num">2</div><div><h3>Gozo (alegria)</h3><div class="grego">grego: <em>chará</em></div></div></header>
+  <span class="tag">Relação com Deus</span>
+  <h4>O que é</h4>
+  <p>Não é a alegria dependente de circunstâncias (felicidade, do latim <em>felicitas</em>, "sorte"), mas uma alegria profunda e estável cuja fonte é Deus. A palavra <em>chará</em> tem a mesma raiz de <em>cháris</em> (graça): quem se sabe perdoado e amado alegra-se. Neemias disse: "a alegria do Senhor é a vossa força" (Ne 8.10). Jesus falou de uma alegria que ninguém poderia tirar (Jo 16.22).</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Paulo e Silas</strong>, presos em Filipos depois de açoitados, orando e cantando hinos a Deus à meia-noite (At 16.22-25). <strong>Os apóstolos</strong>, que saíram do Sinédrio "alegres por terem sido considerados dignos de padecer afronta pelo nome de Jesus" (At 5.41). <strong>Habacuque</strong>, que se alegraria no Senhor mesmo sem figueira florescendo, nem colheita, nem gado (Hc 3.17-18). A carta de Paulo aos Filipenses, escrita da prisão, volta repetidas vezes às palavras "alegria" e "alegrar-se".</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Agradecer pelo que se tem em meio a uma crise financeira. Manter o ânimo em um hospital, sem negar a dor. Cantar e louvar mesmo em dia difícil. Celebrar a conquista do outro sem inveja. Rir com leveza sem ridicularizar ninguém.</div>
+  <h4>Como cultivar</h4>
+  <p>Cultive gratidão deliberada (1 Ts 5.16-18), reserve tempo para louvor e para a comunhão com os irmãos e lembre-se do que Deus já fez (Sl 103.2). Alegria também cresce quando se serve.</p>
+</article>
+
+<!-- 3 -->
+<article class="card fruto">
+  <header><div class="num">3</div><div><h3>Paz</h3><div class="grego">grego: <em>eirḗnē</em> (hebraico <em>shalom</em>)</div></div></header>
+  <span class="tag">Relação com Deus</span>
+  <h4>O que é</h4>
+  <p>Paz bíblica vai além da ausência de conflito. O <em>shalom</em> hebraico significa inteireza, plenitude, bem-estar integral. É a paz com Deus por meio da justificação (Rm 5.1), a paz de Deus que guarda o coração (Fp 4.7) e a paz que o crente leva às relações (Rm 12.18). Jesus a prometeu de forma única: "Deixo-vos a paz, a minha paz vos dou; não vo-la dou como o mundo a dá" (Jo 14.27).</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Jesus dormindo no barco durante a tempestade</strong> (Mc 4.38-39), em sereno descanso no meio do caos. <strong>Daniel</strong>, que na cova dos leões confiou em seu Deus e saiu sem nenhum dano (Dn 6.22-23).<strong>Estêvão</strong>, que ao ser apedrejado viu o céu aberto e orou pelos agressores (At 7.55-60). <strong>Pedro</strong>, que dormia entre dois soldados na véspera de sua possível execução (At 12.6).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Não perder o sono por problemas que não dependem de você. Dar a notícia difícil ao chefe sem tremer. Ser a pessoa calma em um ambiente nervoso. Procurar reconciliação em vez de alimentar mágoa. Não ceder à ansiedade do noticiário nem das redes sociais.</div>
+  <h4>Como cultivar</h4>
+  <p>Aplique Filipenses 4.6-7: ansiedade vira oração com ação de graças, e a paz guarda coração e mente. Entregue as preocupações a quem cuida de você (1 Pe 5.7) e busque a reconciliação onde possível (Mt 5.9,23-24).</p>
+</article>
+
+<!-- 4 -->
+<article class="card fruto">
+  <header><div class="num">4</div><div><h3>Longanimidade (paciência)</h3><div class="grego">grego: <em>makrothymía</em> (literalmente "ânimo longo")</div></div></header>
+  <span class="tag">Relação com os outros</span>
+  <h4>O que é</h4>
+  <p>É a capacidade de suportar pessoas e situações difíceis sem explodir nem desistir. A palavra descreve quem tem "pavio longo": não se irrita facilmente com os outros e não abandona a esperança. Já <em>hypomonḗ</em> (perseverança) é suportar circunstâncias, enquanto <em>makrothymía</em> é suportar <em>pessoas</em>. É o atributo com que Deus trata o seu povo: "tardio em irar-se e grande em misericórdia" (Sl 103.8; Êx 34.6).</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Deus com Israel</strong>, pelos quarenta anos no deserto (At 13.18). <strong>Jó</strong>, cuja paciência é citada em Tg 5.11. <strong>Davi</strong>, que esperou por anos o cumprimento da promessa de reinar, poupando Saul duas vezes (1 Sm 24 e 26). <strong>Paulo</strong>, que suportou, na missão, os que o contradiziam e a quem Cristo mostrou "toda a sua longanimidade" (1 Tm 1.16). <strong>Abraão</strong>, que esperou 25 anos pelo filho prometido.</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Esperar a vez na fila sem resmungar. Responder com calma ao filho que pergunta a mesma coisa pela décima vez. Suportar o colega que pensa diferente. Continuar orando por um familiar que ainda não se converteu. Ensinar um novo membro sem reclamar da lentidão dele.</div>
+  <h4>Como cultivar</h4>
+  <p>Lembre-se de quanta paciência Deus teve (e tem) com você (Rm 2.4). Antes de reagir, faça uma pausa e ore. Pratique a espera em pequenas coisas e peça ao Espírito um coração que aguenta o processo (Cl 1.11).</p>
+</article>
+
+<!-- 5 -->
+<article class="card fruto">
+  <header><div class="num">5</div><div><h3>Benignidade (amabilidade)</h3><div class="grego">grego: <em>chrēstótēs</em></div></div></header>
+  <span class="tag">Relação com os outros</span>
+  <h4>O que é</h4>
+  <p>É a gentileza prática, a ternura afável no trato. A palavra descreve algo "útil, suave, agradável de se usar", e era aplicada a vinho que não é áspero. Em Tito 3.4, Paulo diz que a benignidade de Deus nosso Salvador apareceu em Cristo. Em Romanos 2.4, a benignidade de Deus leva ao arrependimento. Aplica-se ao crente que trata os outros com doçura, mesmo quando é firme.</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Davi com Mefibosete</strong>: pelo amor a Jônatas, trouxe o neto de Saul para comer sempre à mesa do rei (2 Sm 9). <strong>Jesus com as crianças</strong>, acolhendo-as quando os discípulos as repreendiam (Mc 10.13-16). <strong>Boaz</strong>, que tratou Rute com respeito e favor (Rt 2.8-16). <strong>O pai do filho pródigo</strong>, que correu ao encontro do filho (Lc 15.20).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Cumprimentar o porteiro, o garçom e o atendente com atenção e respeito. Falar com suavidade ao corrigir (Pv 15.1). Elogiar com sinceridade. Escrever mensagens sem agressividade, mesmo no calor da discussão. Cuidar do tom de voz em casa.</div>
+  <h4>Como cultivar</h4>
+  <p>Revista-se de "entranhável misericórdia, de benignidade, humildade, mansidão, longanimidade" (Cl 3.12). Observe como Jesus tratava os frágeis e imite-o. Cuide das palavras antes de falar (Ef 4.29).</p>
+</article>
+
+<!-- 6 -->
+<article class="card fruto">
+  <header><div class="num">6</div><div><h3>Bondade</h3><div class="grego">grego: <em>agathōsýnē</em></div></div></header>
+  <span class="tag">Relação com os outros</span>
+  <h4>O que é</h4>
+  <p>É a excelência moral que se traduz em ações generosas. A palavra aparece em poucos textos do Novo Testamento (Rm 15.14; Gl 5.22; Ef 5.9; 2 Ts 1.11) e descreve uma bondade ativa, capaz inclusive de corrigir quando necessário. Alguns estudiosos notam que, enquanto a benignidade é a doçura no trato, a bondade pode ter também a firmeza de purificar o templo: Jesus foi bom tanto ao acolher quanto ao expulsar os cambistas.</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Barnabé</strong>, descrito como "homem bom, cheio do Espírito Santo e de fé" (At 11.24): vendeu um campo para ajudar os pobres (At 4.36-37), acolheu Saulo quando todos o temiam (At 9.26-27) e deu outra chance a João Marcos (At 15.37-39). <strong>Dorcas (Tabita)</strong>, "cheia de boas obras e esmolas" (At 9.36). <strong>Jesus</strong>, que "andou fazendo o bem" (At 10.38).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Fazer o bem sem precisar de aplauso. Doar tempo, dinheiro ou roupas a quem precisa. Ser honesto no trabalho mesmo quando ninguém vê. Dar uma segunda chance a quem errou e orientá-lo com firmeza amorosa. Defender o fraco quando é injustiçado.</div>
+  <h4>Como cultivar</h4>
+  <p>Procure oportunidades de fazer o bem, sem esperar que elas apareçam (Gl 6.9-10). Faça pequenas boas obras de forma anônima. Peça ao Espírito sensibilidade para ver necessidades à sua volta.</p>
+</article>
+
+<!-- 7 -->
+<article class="card fruto">
+  <header><div class="num">7</div><div><h3>Fé (fidelidade)</h3><div class="grego">grego: <em>pístis</em></div></div></header>
+  <span class="tag">Relação consigo mesmo e com Deus</span>
+  <h4>O que é</h4>
+  <p>Aqui, a palavra grega <em>pístis</em> é traduzida por muitos estudiosos como <strong>fidelidade</strong> ou confiabilidade: a característica de alguém em quem se pode confiar, que cumpre a palavra e não abandona o posto. É a fidelidade que reflete a de Deus, que "é fiel" (1 Co 1.9; Lm 3.23). Diferencia-se do dom da fé (1 Co 12.9): este é uma capacitação pontual para um feito extraordinário; o fruto é uma qualidade permanente de caráter, que deve estar em todo cristão.</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Daniel</strong>, fiel a Deus na Babilônia por décadas, sob diferentes reis (Dn 6.4). <strong>José</strong>, fiel na casa de Potifar, na prisão e no palácio (Gn 39–41). <strong>Moisés</strong>, "fiel em toda a casa de Deus" (Hb 3.2,5). <strong>Timóteo</strong> e <strong>Tíquico</strong>, descritos como "fiéis" por Paulo (1 Co 4.17; Ef 6.21). <strong>Abraão</strong>, que continuou crendo na promessa por décadas (Rm 4.18-21).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Chegar na hora e cumprir o combinado. Guardar segredos confiados. Permanecer fiel ao cônjuge, à igreja local e ao compromisso assumido, mesmo quando é conveniente sair. Servir com a mesma excelência quando ninguém está olhando. Pagar o dízimo e as dívidas em dia.</div>
+  <h4>Como cultivar</h4>
+  <p>Comece pelas "coisas pequenas" (Lc 16.10), pois fidelidade é um hábito construído. Faça poucas promessas e cumpra todas. Lembre-se de que a fidelidade final será recompensada: "Muito bem, servo bom e fiel" (Mt 25.21).</p>
+</article>
+
+<!-- 8 -->
+<article class="card fruto">
+  <header><div class="num">8</div><div><h3>Mansidão</h3><div class="grego">grego: <em>praÿtēs</em></div></div></header>
+  <span class="tag">Relação consigo mesmo</span>
+  <h4>O que é</h4>
+  <p>Mansidão não é fraqueza, timidez ou passividade. A palavra grega era usada para descrever um animal selvagem domado, uma força sob controle. O manso tem poder e escolhe não usá-lo para ferir. Ele é humilde para ser ensinado e corrigido (Tg 1.21) e capaz de corrigir os outros "com espírito de mansidão" (Gl 6.1). Jesus declarou: "bem-aventurados os mansos, porque eles herdarão a terra" (Mt 5.5), e disse de si mesmo: "sou manso e humilde de coração" (Mt 11.29).</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>Moisés</strong>, descrito como "mui manso, mais do que todos os homens que havia sobre a terra" (Nm 12.3), apesar de ter liderado a nação mais poderosa da época. Ele não se defendeu quando Miriã e Arão o criticaram, e Deus o defendeu. <strong>Jesus</strong> entrando em Jerusalém montado em um jumentinho (Mt 21.5), diante do soldado que o esbofeteou (Jo 18.22-23) e na cruz ("Pai, perdoa-lhes", Lc 23.34). <strong>Davi</strong> aceitando, calado, as maldições de Simei (2 Sm 16.5-12).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Reconhecer o próprio erro sem se defender com raiva. Ouvir crítica e avaliar com humildade. Discordar com respeito, sem rebaixar o outro. Abrir mão do "meu direito" em nome da paz. Corrigir um irmão com delicadeza, lembrando que você também pode cair (Gl 6.1).</div>
+  <h4>Como cultivar</h4>
+  <p>Peça a Deus um coração ensinável. Antes de responder à provocação, conte até dez e ore. Preste atenção em Jesus e aprenda: "aprendei de mim" (Mt 11.29). A mansidão cresce onde o ego morre (Gl 2.20).</p>
+</article>
+
+<!-- 9 -->
+<article class="card fruto">
+  <header><div class="num">9</div><div><h3>Temperança (domínio próprio)</h3><div class="grego">grego: <em>enkráteia</em></div></div></header>
+  <span class="tag">Relação consigo mesmo</span>
+  <h4>O que é</h4>
+  <p>É o domínio sobre os próprios desejos, impulsos e apetites. O grego fala de "ter poder sobre si", o oposto de ser escravo das paixões. Paulo compara a vida cristã a um atleta que se disciplina em tudo para ganhar a coroa (1 Co 9.24-27). Provérbios 25.28 compara quem não domina o seu espírito a uma cidade derrubada e sem muros. É a última da lista, e talvez a mais conclusiva: o Espírito não nos torna passivos, mas capacita nossa vontade a governar o corpo e as emoções.</p>
+  <h4>Exemplos bíblicos</h4>
+  <div class="exemplo"><strong>José</strong> fugindo da mulher de Potifar (Gn 39.7-12). <strong>Daniel</strong>, que "propôs no seu coração não se contaminar" com a comida do rei (Dn 1.8). <strong>Jesus</strong> resistindo às tentações no deserto depois de quarenta dias de jejum (Mt 4.1-11). <strong>Paulo</strong>, que dizia "subjugo o meu corpo e o reduzo à servidão" (1 Co 9.27). <strong>Davi</strong>, que não matou Saul quando teve a chance (1 Sm 24.4-7).</div>
+  <h4>No dia a dia</h4>
+  <div class="aplicacao"><span class="rotulo">Exemplos práticos</span>
+  Moderação na alimentação e na bebida. Uso consciente do celular, das redes sociais e da TV. Controle do gasto e do consumo. Respirar fundo antes de responder com raiva. Cumprir o horário de oração e leitura bíblica mesmo cansado. Dizer "não" ao que é contrário à vontade de Deus.</div>
+  <h4>Como cultivar</h4>
+  <p>Defina limites claros e peça ajuda de um irmão de confiança para prestar contas. Foge-se da tentação em vez de enfrentá-la quando possível (2 Tm 2.22). Alimente o espírito: "aquilo que mais alimentamos é o que mais cresce". Lembre-se de que o Espírito dá poder, não só desejo (2 Tm 1.7).</p>
+</article>
+
+</section>
+
+<!-- ===================== FRUTO X CARNE ===================== -->
+<section id="carne">
+<div class="banner fruto"><small>Parte 2.1</small><h2>Fruto versus obras da carne</h2></div>
+
+<p>Paulo não apresenta o fruto no vazio. Imediatamente antes (Gl 5.19-21), ele lista as "obras da carne", e a comparação é intencional. A tabela a seguir é um <em>paralelo didático</em> entre cada fruto e a tendência da carne que ele neutraliza; não é uma correspondência exata feita por Paulo, mas ajuda a visualizar o contraste. Para Paulo, "carne" (<em>sárx</em>) não é apenas o corpo, mas a natureza humana caída, voltada para si mesma e para o pecado. O fruto aparece como o oposto de cada tendência da carne.</p>
+
+<div class="tabela-scroll">
+<table>
+<tr><th>Fruto do Espírito</th><th>Tendência da carne que ele combate (cf. Gl 5.19-21)</th><th>Em outras palavras</th></tr>
+<tr><td><strong>Amor</strong></td><td>Inimizades, ódio, ciúmes, ira, contendas</td><td>Amar é buscar o bem do outro; a carne busca o próprio proveito</td></tr>
+<tr><td><strong>Gozo</strong></td><td>Bebedices, glutonarias (busca de alegria em prazeres vazios)</td><td>A alegria do Espírito dispensa os substitutos</td></tr>
+<tr><td><strong>Paz</strong></td><td>Dissensões, facções, discórdias</td><td>A paz une; a carne divide</td></tr>
+<tr><td><strong>Longanimidade</strong></td><td>Iras, porfias (explosões de raiva e disputas)</td><td>A paciência segura a mão; a carne a solta</td></tr>
+<tr><td><strong>Benignidade</strong></td><td>Inimizades, pelejas, iras</td><td>A suavidade trata bem; a carne fere com palavras</td></tr>
+<tr><td><strong>Bondade</strong></td><td>Idolatria, feitiçaria (adorar-se a si ou a poderes que prometem ganho)</td><td>A bondade serve; a carne usa</td></tr>
+<tr><td><strong>Fé / fidelidade</strong></td><td>Heresias, divisões, infidelidade</td><td>Quem é fiel se mantém firme; a carne vai atrás de quem lhe convém</td></tr>
+<tr><td><strong>Mansidão</strong></td><td>Invejas, porfias, ambição egoísta</td><td>O manso entrega; o carnal disputa</td></tr>
+<tr><td><strong>Temperança</strong></td><td>Prostituição, impureza, lascívia, bebedices, glutonarias</td><td>O domínio próprio governa os desejos; a carne é governada por eles</td></tr>
+</table>
+</div>
+
+<div class="versiculo">
+  E os que são de Cristo crucificaram a carne com as suas paixões e concupiscências. Se vivemos em Espírito, andemos também em Espírito.
+  <cite>Gálatas 5.24-25 (ARC)</cite>
+</div>
+
+<div class="aplicacao"><span class="rotulo">O processo de cultivo em cinco verbos</span>
+<strong>Permanecer</strong> (Jo 15.4): vida diária de oração, Palavra e comunhão.<br>
+<strong>Andar</strong> (Gl 5.16,25): dar passos concretos guiados pelo Espírito.<br>
+<strong>Crucificar</strong> (Gl 5.24): negar à carne o que ela pede.<br>
+<strong>Ser podado</strong> (Jo 15.2): aceitar a disciplina e o crescimento que Deus traz, mesmo doloridos.<br>
+<strong>Esperar</strong> (Tg 5.7): fruto leva tempo. Quem planta hoje não colhe amanhã.</div>
+
+<div class="cuidado"><span class="rotulo">Atenção</span>
+Paulo diz "andai em Espírito", e não "esforçai-vos para parecer bons". Moralismo é imitar o fruto sem a raiz. Ele produz frutos de plástico, bonitos de longe e sem vida por dentro. O fruto genuíno nasce da comunhão com o Espírito, não de uma lista de regras.</div>
+</section>
+
+<!-- ===================== DONS E FRUTO ===================== -->
+<section id="juntos">
+<div class="banner"><small>Parte 3</small><h2>Dons e fruto: o equilíbrio</h2></div>
+
+<h3>1 Coríntios 13: o capítulo que une os dois</h3>
+<p>Colocado exatamente entre os capítulos 12 e 14, a "ode ao amor" de Paulo não é um parêntese poético: é o centro da argumentação. Ele diz que línguas humanas e angélicas, profecia, ciência de todos os mistérios, fé que remove montanhas e até o martírio sem amor "de nada" valem (1 Co 13.1-3).</p>
+<div class="versiculo">
+  Ainda que eu falasse as línguas dos homens e dos anjos, e não tivesse amor, seria como o metal que soa ou como o sino que tine.
+  <cite>1 Coríntios 13.1 (ARC)</cite>
+</div>
+<p>Observe: Paulo <strong>não diz</strong> que os dons são ruins ou dispensáveis. Em 1 Co 14.1 ele ordena que se "procure o amor" <em>e</em> que se "deseje com zelo os dons espirituais". Ele quer as duas coisas, e na ordem certa: o amor como alicerce e motivação, os dons como ferramenta.</p>
+
+<h3>Mateus 7.15-23: um alerta sério</h3>
+<p>Jesus faz uma advertência que cabe bem ao nosso estudo. Ele fala de falsos profetas que se conhecem "pelos seus frutos" (Mt 7.16-20) e, logo adiante, diz que muitos lhe dirão: "Senhor, Senhor, não profetizamos em teu nome? Em teu nome não expulsamos demônios? Em teu nome não fizemos muitos milagres?" E a resposta será: "Nunca vos conheci" (Mt 7.21-23).</p>
+<div class="reflexao"><span class="rotulo">Para refletir</span>
+O texto mostra que é possível operar dons sem ter o relacionamento com Cristo que produz fruto. Isso não diminui os dons, mas lembra que eles não são sinal de aprovação pessoal. O que importa no final não é o quanto Deus nos usou, mas se fomos conhecidos por Ele.</div>
+
+<h3>Quadro de equilíbrio</h3>
+<div class="tabela-scroll">
+<table>
+<tr><th>Situação</th><th>Problema</th><th>Remédio bíblico</th></tr>
+<tr><td><strong>Muito dom, pouco fruto</strong></td><td>Eficiência sem caráter: ministério impressionante, vida em ruínas; orgulho, vaidade, quedas públicas</td><td>1 Co 13; Gl 5.22-25; permanecer em Cristo; prestar contas; humildade</td></tr>
+<tr><td><strong>Muito "fruto", sem dons</strong></td><td>Pessoa boa e amável, mas que não busca ou não aceita o poder do Espírito; igreja morna, sem ousadia nem sobrenatural</td><td>1 Co 12.31; 14.1; At 1.8; buscar o batismo e os dons com fé</td></tr>
+<tr><td><strong>Nem dons, nem fruto</strong></td><td>Religiosidade de aparência (2 Tm 3.5)</td><td>Conversão genuína, arrependimento, novo nascimento (Jo 3.3-8)</td></tr>
+<tr><td><strong>Dons e fruto juntos</strong></td><td>Igreja saudável: poder com caráter, serviço com amor, ousadia com humildade</td><td>Andar em Espírito (Gl 5.25) e permanecer na videira (Jo 15)</td></tr>
+</table>
+</div>
+
+<div class="contexto"><span class="rotulo">Exemplo de equilíbrio</span>
+Jesus é o modelo supremo: ungido pelo Espírito "sem medida" (Jo 3.34), operou milagres, curas e palavras de sabedoria e de ciência, e ao mesmo tempo era manso, humilde, paciente, compassivo, fiel e dono de si. Os dons mostravam o seu poder; o fruto mostrava o seu coração. Ele não precisou escolher entre um e outro, e nós também não.</div>
+</section>
+
+<!-- ===================== PRÁTICA ===================== -->
+<section id="pratica">
+<div class="banner"><small>Aplicação</small><h2>Atividades e perguntas para a classe</h2></div>
+
+<h3>Perguntas para discussão</h3>
+<div class="pergunta"><span class="rotulo">Pergunta 1</span>Por que Paulo escreveu o capítulo do amor (1 Co 13) no meio da discussão sobre dons? O que aconteceria na igreja se ele fosse omitido?</div>
+<div class="pergunta"><span class="rotulo">Pergunta 2</span>Qual dos nove frutos você acha mais difícil de manifestar nesta fase da vida? Que situação específica lhe testa esse fruto?</div>
+<div class="pergunta"><span class="rotulo">Pergunta 3</span>Em quais situações você já percebeu a ação de algum dom (sabedoria, discernimento, fé, consolo) em sua vida ou na vida da igreja? Como isso foi edificante?</div>
+<div class="pergunta"><span class="rotulo">Pergunta 4</span>Como a nossa igreja pode honrar mais os dons "menos visíveis" (socorros, serviço, misericórdia, contribuição), sem diminuir os mais "visíveis"?</div>
+<div class="pergunta"><span class="rotulo">Pergunta 5</span>Como podemos examinar uma profecia ou uma mensagem de forma bíblica, sem apagar o Espírito (1 Ts 5.19-21) e sem aceitar tudo sem critério?</div>
+
+<h3>Atividade 1: "Mapa dos meus dons"</h3>
+<div class="aplicacao"><span class="rotulo">Dinâmica em duplas (15 minutos)</span>
+Cada aluno escreve três situações em que sentiu satisfação e fruto ao servir na igreja. Em duplas, cada um lê o que escreveu e o colega responde: "o que vejo em você é...". Ao final, os alunos anotam um dom que desejam buscar e uma ação concreta para exercê-lo nas próximas quatro semanas.</div>
+
+<h3>Atividade 2: "Termômetro do fruto"</h3>
+<div class="aplicacao"><span class="rotulo">Autoavaliação silenciosa (10 minutos)</span>
+Cada aluno recebe uma folha com os nove frutos e atribui, de 1 a 5, o quanto percebe cada fruto na sua vida atual. Em seguida, escolhe <strong>um</strong> fruto para cultivar no próximo mês, anota o versículo correspondente e um gesto prático diário. Importante: o exercício é pessoal; ninguém precisa compartilhar notas.</div>
+
+<h3>Desafio da semana</h3>
+<div class="reflexao"><span class="rotulo">Para viver</span>
+Escolha uma pessoa a quem você pode servir esta semana com o seu dom, e uma situação difícil em que você vai deliberadamente exercitar o fruto que escolheu. No próximo encontro, compartilhe o que aprendeu.</div>
+
+<h3>Oração final</h3>
+<div class="versiculo">
+  Espírito Santo, obrigado por seres o presente do Pai e de Jesus à sua igreja. Derrama sobre nós os dons que Tu queres repartir, e planta em nós o fruto que revela o caráter de Cristo. Que nenhum dom nos engrandeça e que nenhuma fraqueza nos paralise. Ensina-nos a andar em Ti, a servir em amor e a esperar com paciência o crescimento que só Tu podes dar. Em nome de Jesus. Amém.
+</div>
+</section>
+
+<!-- ===================== BIBLIOGRAFIA ===================== -->
+<section id="biblio">
+<div class="banner"><small>Plano de fundo</small><h2>Para aprofundar</h2></div>
+
+<p>Este estudo é construído, primeiramente, sobre as Escrituras e o seu contexto histórico. Os autores abaixo foram consultados como pano de fundo e são recomendados para quem quiser estudar mais. Cada um tem uma perspectiva própria, e vale lê-los com o discernimento berenense de At 17.11, comparando sempre com a Palavra. Confira as edições em português disponíveis, pois nem todas as obras foram traduzidas.</p>
+
+<ul class="biblio">
+  <li><strong>Gordon D. Fee</strong>. <em>God's Empowering Presence: The Holy Spirit in the Letters of Paul</em>. Hendrickson, 1994. Um estudo exaustivo do Espírito em Paulo, escrito por um erudito pentecostal.</li>
+  <li><strong>Gordon D. Fee</strong>. <em>Paul, the Spirit, and the People of God</em>. Hendrickson, 1996. Versão mais acessível do anterior.</li>
+  <li><strong>Gordon D. Fee</strong>. <em>The First Epistle to the Corinthians</em> (NICNT). Eerdmans. Comentário de referência para 1 Coríntios 12–14.</li>
+  <li><strong>D. A. Carson</strong>. <em>Showing the Spirit: A Theological Exposition of 1 Corinthians 12–14</em>. Baker, 1987. Perspectiva reformada evangélica, útil para o contraste de visões.</li>
+  <li><strong>Craig S. Keener</strong>. <em>Gift and Giver: The Holy Spirit for Today</em>. Baker, 2001. Visão contínua dos dons com base histórica e bíblica.</li>
+  <li><strong>Stanley M. Horton</strong>. <em>What the Bible Says About the Holy Spirit</em>. Gospel Publishing House, 1976. Clássico da teologia pentecostal (há edição brasileira pela CPAD).</li>
+  <li><strong>John R. W. Stott</strong>. <em>The Message of Galatians</em> (The Bible Speaks Today). IVP, 1968. Exposição clara de Gálatas, com ênfase na vida no Espírito.</li>
+  <li><strong>J. B. Lightfoot</strong>. <em>St. Paul's Epistle to the Galatians</em>. Comentário clássico do século XIX, com forte atenção ao grego e ao contexto histórico.</li>
+  <li><strong>Materiais da própria denominação</strong>. Recomenda-se consultar também a declaração de fé e os escritos da Igreja do Evangelho Quadrangular sobre o Espírito Santo, para harmonizar o estudo com a doutrina da igreja local.</li>
+</ul>
+
+<div class="contexto"><span class="rotulo">Nota sobre as versões bíblicas</span>
+As citações diretas foram feitas na versão <strong>Almeida Revista e Corrigida (ARC)</strong>. Recomenda-se comparar com outras versões (ARA, NVI, NAA) para enriquecer o entendimento. Em todos os casos, vale o conselho de Paulo: "examinai tudo. Retende o bem" (1 Ts 5.21).</div>
+</section>
+
+</div> <!-- /wrap -->
+
+<footer>
+  <strong>A Profundidade da Palavra de Deus</strong><br>
+  Escola Bíblica · Estudo: Dons e Frutos do Espírito Santo<br>
+  Condutor de Estudos: Claudinei Lopes<br>
+  <em>"Sonda-me, ó Deus, e conhece o meu coração." (Sl 139.23)</em><br>
+  <button class="btn" onclick="compartilhar()">Compartilhar este estudo</button>
+</footer>
+
+<script>
+function compartilhar(){
+  var dados={title:document.title,text:'Estudo bíblico: Dons e Frutos do Espírito Santo',url:location.href};
+  if(navigator.share){navigator.share(dados).catch(function(){});}
+  else if(navigator.clipboard){navigator.clipboard.writeText(location.href).then(function(){alert('Link copiado!');});}
+  else{prompt('Copie o link:',location.href);}
+}
+</script>
+</body>
+</html>
